@@ -590,14 +590,14 @@ export default function PortalPreview() {
       {/* Sidebar Overlay (Mobile) */}
       {isSidebarOpen && (
         <div 
-          className="md:hidden fixed inset-0 bg-black/60 z-40"
+          className="md:hidden fixed inset-0 bg-black/60 z-[60]"
           onClick={() => setIsSidebarOpen(false)}
         />
       )}
 
       {/* Sidebar */}
       <aside className={cn(
-        "w-[300px] bg-white border-r border-gray-200 flex flex-col fixed h-screen z-50 shadow-[5px_0_15px_rgba(0,0,0,0.05)] transition-transform duration-300",
+        "w-[300px] bg-white border-r border-gray-200 flex flex-col fixed h-screen z-[70] shadow-[5px_0_15px_rgba(0,0,0,0.05)] transition-transform duration-300",
         isSidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
       )}>
         
@@ -610,7 +610,7 @@ export default function PortalPreview() {
             <span className="font-extrabold text-xl md:text-2xl tracking-tight text-gray-900 leading-none">
               RITIKA
             </span>
-            <span className="font-bold text-[9px] md:text-[10px] text-black uppercase tracking-wider mt-0.5 bg-[#FFD700] px-1 py-0.5 hidden md:inline-block w-max">
+            <span className="font-bold text-[9px] md:text-[10px] text-black uppercase tracking-wider mt-0.5 bg-[#FFD700] px-1 py-0.5 inline-block w-max">
               Financial Corporation
             </span>
           </div>

@@ -11,7 +11,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans text-gray-900 selection:bg-[#04407E] selection:text-white pt-16">
+    <div className="min-h-screen bg-gray-50 font-sans text-gray-900 selection:bg-[#04407E] selection:text-white">
       
       {/* HERO SECTION */}
       <section className="bg-gray-900 py-12 md:py-16 text-center">
