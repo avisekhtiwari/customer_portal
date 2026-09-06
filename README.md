@@ -1,1 +1,1 @@
-# ritikacustomerportal
+# customer_portal
