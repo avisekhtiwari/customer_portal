@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #ffffff;
+  --color-primary-foreground: #04407E;
+  --color-accent: #04407E;
+  --color-accent-foreground: #ffffff;
+  
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-neutral: #9ca3af;
+  --color-background: #ffffff;
+  --color-background-alt: #f3f4f6;
+  --color-foreground: #111827;
+}
+
+@layer base {
+  button, input, select {
+    @apply rounded-full;
+  }
+  textarea {
+    @apply rounded-3xl;
+  }
+  img {
+    @apply rounded-3xl;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: 'Gilroy', sans-serif; 
+    text-transform: uppercase;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Denton', serif;
+  }
+}
+
