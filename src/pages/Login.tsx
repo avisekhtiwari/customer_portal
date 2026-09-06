@@ -1,14 +1,36 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { ArrowLeft, User, KeyRound, ShieldCheck, CheckCircle2, HeadphonesIcon } from 'lucide-react';
+import { User, ShieldCheck, CheckCircle2, HeadphonesIcon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Login() {
   const navigate = useNavigate();
   const [mobile, setMobile] = useState('');
-  const [otp, setOtp] = useState('');
-  const [step, setStep] = useState<'MOBILE' | 'OTP'>('MOBILE');
+    const [step, setStep] = useState<'MOBILE' | 'OTP'>('MOBILE');
   const [isLoading, setIsLoading] = useState(false);
+
+  const [otpArray, setOtpArray] = useState(['', '', '', '', '', '']);
+  const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
+
+  const handleOtpChange = (index: number, value: string) => {
+    if (!/^[0-9]*$/.test(value)) return;
+    
+    const newOtpArray = [...otpArray];
+    newOtpArray[index] = value;
+    setOtpArray(newOtpArray);
+    
+    // Auto focus next
+    if (value && index < 5) {
+      inputRefs.current[index + 1]?.focus();
+    }
+  };
+
+  const handleOtpKeyDown = (index: number, e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Backspace' && !otpArray[index] && index > 0) {
+      inputRefs.current[index - 1]?.focus();
+    }
+  };
+
 
   const handleSendOtp = (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,7 +45,8 @@ export default function Login() {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (otp.length < 4) return;
+    const currentOtp = otpArray.join('');
+    if (currentOtp.length < 6) return;
     setIsLoading(true);
     
     // Fallback name generation from mobile number
@@ -102,12 +125,7 @@ export default function Login() {
         
         {/* Top Navigation */}
         <div className="absolute top-0 left-0 w-full p-6 flex justify-between items-center z-10">
-          <Link to="/" className="group flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-gray-500 hover:text-black transition-colors">
-            <div className="w-8 h-8 rounded-full bg-gray-100 group-hover:bg-[#FFD700] flex items-center justify-center transition-colors">
-              <ArrowLeft className="w-4 h-4" />
-            </div>
-            Back to Website
-          </Link>
+          <div></div>
           
           <div className="flex items-center gap-2 text-gray-500 text-sm font-bold hover:text-black transition-colors cursor-pointer">
             <HeadphonesIcon className="w-4 h-4" />
@@ -202,25 +220,26 @@ export default function Login() {
                   
                   <div className="space-y-2">
                     <label className="block text-xs font-bold text-gray-700 uppercase tracking-widest">Enter 6-Digit OTP</label>
-                    <div className="relative group">
-                      <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400 group-focus-within:text-black transition-colors">
-                        <KeyRound className="w-5 h-5" />
-                      </div>
-                      <input 
-                        required
-                        type="text"
-                        maxLength={6}
-                        value={otp}
-                        onChange={(e) => setOtp(e.target.value.replace(/\D/g, ''))}
-                        className="w-full h-14 rounded-xl pl-12 pr-4 text-center tracking-[0.5em] text-2xl font-black border-2 border-gray-200 focus:outline-none focus:border-[#FFD700] bg-gray-50 focus:bg-white transition-all text-gray-900 shadow-sm"
-                        placeholder="••••••"
-                      />
+                    <div className="flex gap-2 justify-between">
+                      {[0, 1, 2, 3, 4, 5].map((index) => (
+                        <input
+                          key={index}
+                          ref={(el) => { inputRefs.current[index] = el; }}
+                          type="text"
+                          inputMode="numeric"
+                          maxLength={1}
+                          value={otpArray[index]}
+                          onChange={(e) => handleOtpChange(index, e.target.value)}
+                          onKeyDown={(e) => handleOtpKeyDown(index, e)}
+                          className="w-12 h-14 sm:w-14 sm:h-16 rounded-xl text-center text-2xl font-black border-2 border-gray-200 focus:outline-none focus:border-[#FFD700] bg-gray-50 focus:bg-white transition-all text-gray-900 shadow-sm"
+                        />
+                      ))}
                     </div>
                   </div>
 
                   <button 
                     type="submit"
-                    disabled={isLoading || otp.length < 4}
+                    disabled={isLoading || otpArray.join('').length < 6}
                     className="w-full bg-[#FFD700] hover:bg-[#F2C900] text-black font-bold uppercase tracking-wider h-14 rounded-lg transition-all shadow-sm flex justify-center items-center disabled:opacity-50 mt-4"
                   >
                     {isLoading ? (
