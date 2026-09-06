@@ -87,7 +87,7 @@ export default function HeroCarousel() {
  };
 
  return (
- <section className="relative min-h-[90vh] flex items-center bg-[#04407E] overflow-hidden pt-20">
+ <section className="relative min-h-[90vh] flex items-center bg-[#04407E] overflow-hidden pt-16">
  {/* Full Background Image Carousel */}
  <div className="absolute inset-0 pointer-events-none z-0">
  <AnimatePresence custom={direction} mode="wait">

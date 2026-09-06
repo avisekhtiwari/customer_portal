@@ -1,161 +1,104 @@
-import { useState, useEffect } from 'react';
-import { useSearchParams, Link } from 'react-router-dom';
-import { IndianRupee } from 'lucide-react';
-import { MOCK_BIKES } from '@/lib/mockData';
+import { useState } from 'react';
+import { Calculator } from 'lucide-react';
 
 export default function EMICalculator() {
- const [searchParams] = useSearchParams();
- const bikeId = searchParams.get('bike');
- 
- const [bikePrice, setBikePrice] = useState(150000);
- const [downPayment, setDownPayment] = useState(30000);
- const [interestRate, setInterestRate] = useState(10.5);
- const [tenure, setTenure] = useState(24);
+  const [amount, setAmount] = useState(80000);
+  const [rate, setRate] = useState(9.5);
+  const [tenure, setTenure] = useState(24);
 
- useEffect(() => {
- if (bikeId) {
- const bike = MOCK_BIKES.find(b => b.id === bikeId);
- if (bike) {
- setBikePrice(bike.basePrice);
- setDownPayment(Math.floor(bike.basePrice * 0.2));
- }
- }
- }, [bikeId]);
+  // EMI Formula: P * r * (1 + r)^n / ((1 + r)^n - 1)
+  const monthlyRate = rate / 12 / 100;
+  const emi = (amount * monthlyRate * Math.pow(1 + monthlyRate, tenure)) / (Math.pow(1 + monthlyRate, tenure) - 1);
+  const totalAmount = emi * tenure;
+  const totalInterest = totalAmount - amount;
 
- const loanAmount = Math.max(0, bikePrice - downPayment);
- 
- // EMI Formula: P x R x (1+R)^N / [(1+R)^N-1]
- // P = Principal (Loan Amount)
- // R = Monthly Interest Rate (Annual Rate / 12 / 100)
- // N = Tenure in Months
- 
- const calculateEMI = () => {
- if (loanAmount <= 0) return 0;
- const r = interestRate / 12 / 100;
- const emi = (loanAmount * r * Math.pow(1 + r, tenure)) / (Math.pow(1 + r, tenure) - 1);
- return Math.round(emi);
- };
+  return (
+    <div className="min-h-screen bg-gray-50 font-sans text-gray-900 selection:bg-[#04407E] selection:text-white pt-16">
+      
+      {/* HERO SECTION */}
+      <section className="bg-gray-900 py-12 md:py-16 text-center">
+        <h1 className="text-5xl font-extrabold text-white mb-6">EMI Calculator</h1>
+        <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          Plan your finances accurately. Calculate your monthly installments for your dream two-wheeler in seconds.
+        </p>
+      </section>
 
- const emiAmount = calculateEMI();
- const totalPayable = emiAmount * tenure;
- const totalInterest = Math.max(0, totalPayable - loanAmount);
+      {/* CALCULATOR SECTION */}
+      <section className="bg-[#f8f9fa] py-10 md:py-12">
+        <div className="flex flex-col md:flex-row w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 gap-12">
+          
+          <div className="w-full md:w-1/2 flex flex-col justify-center bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+            <h2 className="text-3xl font-extrabold text-black mb-8 flex items-center">
+              <Calculator className="mr-4 text-[#9e7146]" /> Enter Details
+            </h2>
+            
+            <div className="mb-6">
+              <label className="flex justify-between text-sm font-bold text-gray-700 mb-2">
+                <span>Loan Amount (₹)</span>
+                <span className="text-[#9e7146]">₹{amount.toLocaleString()}</span>
+              </label>
+              <input 
+                type="range" min="10000" max="500000" step="5000"
+                value={amount} onChange={(e) => setAmount(Number(e.target.value))}
+                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#dcb285]"
+              />
+            </div>
 
- return (
- <div className="pt-24 pb-20 min-h-screen bg-background-alt">
- <div className="container mx-auto px-4 md:px-6">
- <div className="text-center max-w-2xl mx-auto mb-12">
- <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Smart EMI Calculator</h1>
- <p className="text-gray-600 text-lg">Plan your finance with our transparent EMI estimator.</p>
- </div>
+            <div className="mb-6">
+              <label className="flex justify-between text-sm font-bold text-gray-700 mb-2">
+                <span>Interest Rate (% p.a.)</span>
+                <span className="text-[#9e7146]">{rate}%</span>
+              </label>
+              <input 
+                type="range" min="5" max="25" step="0.5"
+                value={rate} onChange={(e) => setRate(Number(e.target.value))}
+                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#dcb285]"
+              />
+            </div>
 
- <div className="bg-white shadow-xl overflow-hidden max-w-5xl mx-auto border border-gray-100 flex flex-col md:flex-row">
- 
- {/* Controls */}
- <div className="w-full md:w-3/5 p-8 md:p-12 border-b md:border-b-0 md:border-r border-gray-100">
- <h3 className="text-2xl font-bold mb-8">Loan Details</h3>
- 
- <div className="space-y-8">
- <div>
- <div className="flex justify-between mb-2">
- <label className="font-semibold text-gray-700">Bike Price</label>
- <span className="font-bold flex items-center"><IndianRupee className="w-4 h-4" /> {bikePrice.toLocaleString('en-IN')}</span>
- </div>
- <input 
- type="range" 
- min="10000" max="500000" step="5000"
- value={bikePrice}
- onChange={(e) => setBikePrice(Number(e.target.value))}
- className="w-full h-2 bg-gray-200 appearance-none cursor-pointer accent-accent"
- />
- </div>
+            <div className="mb-6">
+              <label className="flex justify-between text-sm font-bold text-gray-700 mb-2">
+                <span>Loan Tenure (Months)</span>
+                <span className="text-[#9e7146]">{tenure} Months</span>
+              </label>
+              <input 
+                type="range" min="6" max="60" step="6"
+                value={tenure} onChange={(e) => setTenure(Number(e.target.value))}
+                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#dcb285]"
+              />
+            </div>
+          </div>
+          
+          <div className="w-full md:w-1/2 flex flex-col justify-center bg-gray-900 p-10 rounded-3xl shadow-lg text-white">
+            <h3 className="text-xl font-bold text-gray-400 mb-4 uppercase tracking-wider">Your EMI Details</h3>
+            
+            <div className="mb-8 border-b border-gray-700 pb-8">
+              <span className="block text-gray-400 mb-2">Monthly EMI</span>
+              <span className="text-6xl font-extrabold text-[#dcb285]">₹{Math.round(emi).toLocaleString()}</span>
+            </div>
 
- <div>
- <div className="flex justify-between mb-2">
- <label className="font-semibold text-gray-700">Down Payment</label>
- <span className="font-bold flex items-center"><IndianRupee className="w-4 h-4" /> {downPayment.toLocaleString('en-IN')}</span>
- </div>
- <input 
- type="range" 
- min="0" max={bikePrice} step="5000"
- value={downPayment}
- onChange={(e) => setDownPayment(Number(e.target.value))}
- className="w-full h-2 bg-gray-200 appearance-none cursor-pointer accent-accent"
- />
- </div>
+            <div className="space-y-4">
+              <div className="flex justify-between items-center">
+                <span className="text-gray-400">Principal Amount</span>
+                <span className="font-bold text-lg">₹{amount.toLocaleString()}</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-gray-400">Total Interest</span>
+                <span className="font-bold text-lg text-red-400">₹{Math.round(totalInterest).toLocaleString()}</span>
+              </div>
+              <div className="flex justify-between items-center pt-4 border-t border-gray-800">
+                <span className="text-gray-300 font-bold">Total Amount Payable</span>
+                <span className="font-bold text-2xl text-white">₹{Math.round(totalAmount).toLocaleString()}</span>
+              </div>
+            </div>
+            
+            <button className="mt-10 bg-[#FFD700] hover:bg-[#F2C900] text-black font-bold uppercase tracking-wider py-4 px-8 rounded-lg transition-all shadow-sm w-full">
+              Apply for Loan Now
+            </button>
+          </div>
+        </div>
+      </section>
 
- <div>
- <div className="flex justify-between mb-2">
- <label className="font-semibold text-gray-700">Interest Rate (% p.a.)</label>
- <span className="font-bold">{interestRate}%</span>
- </div>
- <input 
- type="range" 
- min="7" max="20" step="0.5"
- value={interestRate}
- onChange={(e) => setInterestRate(Number(e.target.value))}
- className="w-full h-2 bg-gray-200 appearance-none cursor-pointer accent-accent"
- />
- </div>
-
- <div>
- <div className="flex justify-between mb-2">
- <label className="font-semibold text-gray-700">Tenure (Months)</label>
- <span className="font-bold">{tenure} Months</span>
- </div>
- <div className="flex gap-2">
- {[12, 24, 36, 48].map(t => (
- <button
- key={t}
- onClick={() => setTenure(t)}
- className={`flex-1 py-3 font-medium transition-colors ${tenure === t ? 'bg-accent text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
- >
- {t}m
- </button>
- ))}
- </div>
- </div>
- </div>
- </div>
-
- {/* Results */}
- <div className="w-full md:w-2/5 p-8 md:p-12 bg-gray-50 flex flex-col justify-between">
- <div>
- <h3 className="text-2xl font-bold mb-8">Estimated Summary</h3>
- 
- <div className="mb-8">
- <p className="text-gray-500 mb-2">Monthly EMI</p>
- <p className="text-5xl font-bold text-accent flex items-center">
- <IndianRupee className="w-8 h-8 mr-1" />
- {emiAmount.toLocaleString('en-IN')}
- </p>
- </div>
-
- <div className="space-y-4 mb-8">
- <div className="flex justify-between items-center py-3 border-b border-gray-200">
- <span className="text-gray-600">Principal Amount</span>
- <span className="font-bold text-gray-900 flex items-center"><IndianRupee className="w-4 h-4 mr-1"/> {loanAmount.toLocaleString('en-IN')}</span>
- </div>
- <div className="flex justify-between items-center py-3 border-b border-gray-200">
- <span className="text-gray-600">Total Interest</span>
- <span className="font-bold text-gray-900 flex items-center"><IndianRupee className="w-4 h-4 mr-1"/> {totalInterest.toLocaleString('en-IN')}</span>
- </div>
- <div className="flex justify-between items-center py-3">
- <span className="text-gray-900 font-bold">Total Payable</span>
- <span className="font-bold text-accent flex items-center"><IndianRupee className="w-4 h-4 mr-1"/> {totalPayable.toLocaleString('en-IN')}</span>
- </div>
- </div>
- </div>
-
- <Link 
- to={`/finance?loanAmount=${loanAmount}&tenure=${tenure}${bikeId ? `&bike=${bikeId}` : ''}`}
- className="w-full block text-center bg-primary hover:bg-primary/90 text-white py-4 font-bold transition-colors"
- >
- Apply for Finance
- </Link>
- </div>
- 
- </div>
- </div>
- </div>
- );
+    </div>
+  );
 }

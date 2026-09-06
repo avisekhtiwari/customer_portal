@@ -44,10 +44,10 @@ const Dashboard = () => {
  className="flex justify-between items-end"
  >
  <div>
- <h2 className="text-3xl font-bold tracking-tight text-[#04407E] mb-1">hello, {user ? user.name.toLowerCase() : 'john'}.</h2>
+ <h2 className="text-3xl font-bold tracking-tight text-[#9e7146] mb-1">hello, {user ? user.name.toLowerCase() : 'john'}.</h2>
  <p className="text-gray-500 font-medium">here is your financial summary.</p>
  </div>
- <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#04407E] to-[#032c57] flex items-center justify-center text-white font-bold text-lg shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+ <div className="w-12 h-12 rounded-full bg-gray-900 flex items-center justify-center text-white font-bold text-lg shadow-[0_0_20px_rgba(212,175,55,0.3)]">
  {user ? user.initials : 'JD'}
  </div>
  </motion.div>
@@ -57,7 +57,7 @@ const Dashboard = () => {
         <div className="flex justify-between items-start mb-8">
           <div className="flex items-center gap-3">
             <div className="p-3 bg-gray-100">
-              <CreditCard className="w-6 h-6 text-[#04407E]" />
+              <CreditCard className="w-6 h-6 text-[#9e7146]" />
             </div>
             <p className="text-sm font-medium tracking-widest text-gray-500 uppercase">Total Outstanding</p>
           </div>
@@ -68,7 +68,7 @@ const Dashboard = () => {
         <div className="flex flex-col">
           <div className="flex items-baseline gap-2">
             <span className="text-4xl text-gray-500 font-light">₹</span>
-            <h3 className="text-6xl md:text-7xl font-black text-[#04407E] tracking-tighter">60,800</h3>
+            <h3 className="text-6xl md:text-7xl font-black text-[#9e7146] tracking-tighter">60,800</h3>
           </div>
           <p className="text-gray-500 mt-2 flex items-center gap-2 text-sm">
             <Activity className="w-4 h-4" /> Across 1 active loan
@@ -80,13 +80,13 @@ const Dashboard = () => {
         <div>
           <p className="text-sm font-medium tracking-widest text-gray-500 uppercase mb-4">Next EMI Due</p>
           <div className="flex items-baseline gap-1">
-            <span className="text-xl text-[#04407E] font-light">₹</span>
-            <h3 className="text-4xl font-bold text-[#04407E]">3,514</h3>
+            <span className="text-xl text-[#9e7146] font-light">₹</span>
+            <h3 className="text-4xl font-bold text-[#9e7146]">3,514</h3>
           </div>
           <p className="text-gray-500 mt-2 text-sm">Due on 15 Oct 2026</p>
         </div>
         
-        <button onClick={() => navigate('/portal/emi')} className="mt-8 w-full group rounded-full relative inline-flex h-14 items-center justify-center overflow-hidden bg-[#04407E] px-8 font-semibold text-white hover:bg-[#033060] transition-colors">
+        <button onClick={() => navigate('/portal/emi')} className="mt-8 w-full group rounded-lg relative inline-flex h-14 items-center justify-center overflow-hidden bg-[#FFD700] hover:bg-[#F2C900] text-black font-bold uppercase tracking-wider px-8 transition-all shadow-sm">
           Pay Now
           <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
         </button>
@@ -96,8 +96,8 @@ const Dashboard = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       <GlassCard delay={0.3} className="p-8">
         <div className="flex items-center justify-between mb-6">
-          <h4 className="text-xl font-bold text-[#04407E]">Recent Transactions</h4>
-          <button onClick={() => navigate('/portal/emi')} className="text-sm text-[#04407E] hover:text-[#04407E] transition-colors">View All</button>
+          <h4 className="text-xl font-bold text-[#9e7146]">Recent Transactions</h4>
+          <button onClick={() => navigate('/portal/emi')} className="text-sm text-[#9e7146] hover:text-[#9e7146] transition-colors">View All</button>
         </div>
         <div className="space-y-4">
           {[
@@ -111,12 +111,12 @@ const Dashboard = () => {
                   <Zap className="w-5 h-5 text-gray-500" />
                 </div>
                 <div>
-                  <p className="font-semibold text-[#04407E]">EMI Payment</p>
+                  <p className="font-semibold text-[#9e7146]">EMI Payment</p>
                   <p className="text-xs text-gray-500">{txn.date}</p>
                 </div>
               </div>
               <div className="text-right">
-                <p className="font-bold text-[#04407E]">-₹{txn.amount.toLocaleString()}</p>
+                <p className="font-bold text-[#9e7146]">-₹{txn.amount.toLocaleString()}</p>
                 <p className="text-xs text-green-600">Success</p>
               </div>
             </div>
@@ -127,11 +127,11 @@ const Dashboard = () => {
  <GlassCard delay={0.4} className="p-8">
  <div className="h-full flex flex-col items-center justify-center text-center space-y-4">
  <div className="w-20 h-20 rounded-full bg-gray-100 flex items-center justify-center mb-4">
- <FileText className="w-8 h-8 text-[#04407E]" />
+ <FileText className="w-8 h-8 text-[#9e7146]" />
  </div>
- <h4 className="text-xl font-bold text-[#04407E]">Download Statements</h4>
+ <h4 className="text-xl font-bold text-[#9e7146]">Download Statements</h4>
  <p className="text-gray-500 text-sm max-w-[250px]">Get your detailed loan statements and NOCs instantly.</p>
- <button onClick={() => navigate('/portal/documents')} className="px-6 py-3 rounded-full bg-gray-200 text-[#04407E] font-semibold hover:bg-white/20 transition-colors">
+ <button onClick={() => navigate('/portal/documents')} className="px-6 py-3 rounded-lg bg-[#FFD700] hover:bg-[#F2C900] text-black font-bold uppercase tracking-wider transition-all shadow-sm">
  Access Documents
  </button>
  </div>
@@ -164,7 +164,7 @@ const MyLoans = () => {
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
       >
-        <h2 className="text-3xl font-bold tracking-tight text-[#04407E] mb-1">My Loans</h2>
+        <h2 className="text-3xl font-bold tracking-tight text-[#9e7146] mb-1">My Loans</h2>
         <p className="text-gray-500 font-medium">Manage your active and past vehicle loans.</p>
       </motion.div>
 
@@ -172,10 +172,10 @@ const MyLoans = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-200 pb-6 mb-6">
           <div className="flex items-center gap-4 mb-4 md:mb-0">
             <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center">
-              <span className="text-[#04407E] font-black text-xl">{loanDetails.vehicle_brand[0]}</span>
+              <span className="text-[#9e7146] font-black text-xl">{loanDetails.vehicle_brand[0]}</span>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-[#04407E]">{loanDetails.vehicle_brand} {loanDetails.vehicle_model}</h3>
+              <h3 className="text-xl font-bold text-[#9e7146]">{loanDetails.vehicle_brand} {loanDetails.vehicle_model}</h3>
               <p className="text-gray-500 text-sm">Loan No: {loanDetails.loan_no}</p>
             </div>
           </div>
@@ -187,41 +187,41 @@ const MyLoans = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
           <div>
             <p className="text-gray-500 text-xs font-bold tracking-widest uppercase mb-1">Loan Amount</p>
-            <p className="text-[#04407E] font-semibold">₹ {loanDetails.loan_amount.toLocaleString()}</p>
+            <p className="text-[#9e7146] font-semibold">₹ {loanDetails.loan_amount.toLocaleString()}</p>
           </div>
           <div>
             <p className="text-gray-500 text-xs font-bold tracking-widest uppercase mb-1">Down Payment</p>
-            <p className="text-[#04407E] font-semibold">₹ {loanDetails.down_payment.toLocaleString()}</p>
+            <p className="text-[#9e7146] font-semibold">₹ {loanDetails.down_payment.toLocaleString()}</p>
           </div>
           <div>
             <p className="text-gray-500 text-xs font-bold tracking-widest uppercase mb-1">Tenure</p>
-            <p className="text-[#04407E] font-semibold">{loanDetails.tenure} Months</p>
+            <p className="text-[#9e7146] font-semibold">{loanDetails.tenure} Months</p>
           </div>
           <div>
             <p className="text-gray-500 text-xs font-bold tracking-widest uppercase mb-1">EMI Amount</p>
-            <p className="text-[#04407E] font-semibold">₹ {loanDetails.emi_amount.toLocaleString()}</p>
+            <p className="text-[#9e7146] font-semibold">₹ {loanDetails.emi_amount.toLocaleString()}</p>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 bg-gray-50 p-4 rounded-2xl border border-gray-200">
           <div>
             <p className="text-gray-500 text-xs font-bold tracking-widest uppercase mb-1">Registration No</p>
-            <p className="text-[#04407E] text-sm font-medium">{loanDetails.registration_no}</p>
+            <p className="text-[#9e7146] text-sm font-medium">{loanDetails.registration_no}</p>
           </div>
           <div>
             <p className="text-gray-500 text-xs font-bold tracking-widest uppercase mb-1">Chassis No</p>
-            <p className="text-[#04407E] text-sm font-medium">{loanDetails.chassis_no}</p>
+            <p className="text-[#9e7146] text-sm font-medium">{loanDetails.chassis_no}</p>
           </div>
           <div>
             <p className="text-gray-500 text-xs font-bold tracking-widest uppercase mb-1">Engine No</p>
-            <p className="text-[#04407E] text-sm font-medium">{loanDetails.engine_no}</p>
+            <p className="text-[#9e7146] text-sm font-medium">{loanDetails.engine_no}</p>
           </div>
         </div>
 
         <div className="mt-8 pt-6 border-t border-gray-200">
           <div className="flex justify-between text-sm mb-2">
             <span className="text-gray-500">Repayment Progress (Interest + Principal)</span>
-            <span className="text-[#04407E] font-bold">23%</span>
+            <span className="text-[#9e7146] font-bold">23%</span>
           </div>
           <div className="w-full h-2 rounded-full bg-gray-100 overflow-hidden">
             <div className="h-full bg-gradient-to-r from-[#04407E] to-[#055bba] w-[23%]"></div>
@@ -248,13 +248,13 @@ const EMISchedule = () => {
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
       >
-        <h2 className="text-3xl font-bold tracking-tight text-[#04407E] mb-1">EMI Schedule</h2>
+        <h2 className="text-3xl font-bold tracking-tight text-[#9e7146] mb-1">EMI Schedule</h2>
         <p className="text-gray-500 font-medium">Track your upcoming payments and past receipts.</p>
       </motion.div>
 
       <GlassCard className="p-0 overflow-hidden">
         <div className="p-6 bg-gray-100 border-b border-gray-200 flex justify-between items-center">
-          <h3 className="font-bold text-[#04407E]">Loan No: LN-2024-89012</h3>
+          <h3 className="font-bold text-[#9e7146]">Loan No: LN-2024-89012</h3>
           <button onClick={() => alert('Redirecting to secure payment gateway...')} className="text-sm rounded-full font-semibold text-white bg-[#04407E] hover:bg-[#055bba] px-4 py-2 transition-colors">
             Pay Advance EMI
           </button>
@@ -267,7 +267,7 @@ const EMISchedule = () => {
                   <Calendar className="w-5 h-5 text-gray-500" />
                 </div>
                 <div>
-                  <p className="text-[#04407E] font-semibold">Month {item.month_number} - {new Date(item.emi_date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric'})}</p>
+                  <p className="text-[#9e7146] font-semibold">Month {item.month_number} - {new Date(item.emi_date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric'})}</p>
                   <p className="text-sm text-gray-500">Principal: ₹{item.principal_payment} | Interest: ₹{item.interest_payment}</p>
                   {(item.late_fine > 0 || item.bounce_charge > 0) && (
                     <p className="text-xs text-red-400 mt-1">Late Fine: ₹{item.late_fine} | Bounce: ₹{item.bounce_charge}</p>
@@ -276,7 +276,7 @@ const EMISchedule = () => {
               </div>
               <div className="flex items-center gap-6 w-full md:w-auto justify-between md:justify-end">
                 <div className="text-right">
-                  <p className="text-xl font-bold text-[#04407E]">₹ {(item.emi_amount + item.late_fine + item.bounce_charge).toLocaleString()}</p>
+                  <p className="text-xl font-bold text-[#9e7146]">₹ {(item.emi_amount + item.late_fine + item.bounce_charge).toLocaleString()}</p>
                   <p className="text-xs text-gray-500">Balance: ₹{item.balance.toLocaleString()}</p>
                 </div>
                 {item.status === "Paid" ? (
@@ -284,7 +284,7 @@ const EMISchedule = () => {
                     PAID
                   </span>
                 ) : (
-                  <span className="px-3 py-1 rounded-full text-xs font-semibold text-[#04407E] bg-[#04407E]/10 border border-[#04407E]/20 w-24 text-center">
+                  <span className="px-3 py-1 rounded-full text-xs font-semibold text-[#9e7146] bg-[#04407E]/10 border border-[#04407E]/20 w-24 text-center">
                     PENDING
                   </span>
                 )}
@@ -301,7 +301,7 @@ const Documents = () => {
   return (
     <div className="space-y-8 pb-20 md:pb-0">
       <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
-        <h2 className="text-3xl font-bold tracking-tight text-[#04407E] mb-1">Documents</h2>
+        <h2 className="text-3xl font-bold tracking-tight text-[#9e7146] mb-1">Documents</h2>
         <p className="text-gray-500 font-medium">Access your loan statements and certificates.</p>
       </motion.div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -314,14 +314,14 @@ const Documents = () => {
           <GlassCard key={i} className="p-6 flex items-center justify-between">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center">
-                <doc.icon className={`w-6 h-6 ${doc.locked ? 'text-gray-600' : 'text-[#04407E]'}`} />
+                <doc.icon className={`w-6 h-6 ${doc.locked ? 'text-gray-600' : 'text-[#9e7146]'}`} />
               </div>
               <div>
-                <h4 className={`font-bold ${doc.locked ? 'text-gray-500' : 'text-[#04407E]'}`}>{doc.title}</h4>
+                <h4 className={`font-bold ${doc.locked ? 'text-gray-500' : 'text-[#9e7146]'}`}>{doc.title}</h4>
                 <p className="text-sm text-gray-500">{doc.desc}</p>
               </div>
             </div>
-            <button disabled={doc.locked} onClick={() => alert(`Downloading ${doc.title}...`)} className={`px-4 py-2 text-sm font-semibold transition-colors ${doc.locked ? 'bg-gray-100 text-gray-600' : 'bg-gray-200 text-[#04407E] hover:bg-white/20'}`}>
+            <button disabled={doc.locked} onClick={() => alert(`Downloading ${doc.title}...`)} className={`px-4 py-2 text-sm font-semibold transition-colors ${doc.locked ? 'bg-gray-100 text-gray-600' : 'bg-gray-200 text-[#9e7146] hover:bg-white/20'}`}>
               {doc.locked ? 'Locked' : 'Download'}
             </button>
           </GlassCard>
@@ -336,10 +336,10 @@ const Queries = () => {
     <div className="space-y-8 pb-20 md:pb-0">
       <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
         <div>
-          <h2 className="text-3xl font-bold tracking-tight text-[#04407E] mb-1">Support Queries</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-[#9e7146] mb-1">Support Queries</h2>
           <p className="text-gray-500 font-medium">Raise a ticket or view past interactions.</p>
         </div>
-        <button onClick={() => alert('Opening ticket creation form...')} className="px-6 py-2 rounded-full bg-[#04407E] hover:bg-[#055bba] text-[#04407E] font-semibold">New Ticket</button>
+        <button onClick={() => alert('Opening ticket creation form...')} className="px-6 py-2 rounded-lg bg-[#FFD700] hover:bg-[#F2C900] text-black font-bold uppercase tracking-wider shadow-sm">New Ticket</button>
       </motion.div>
       <GlassCard className="p-0 overflow-hidden">
         <div className="divide-y divide-gray-200">
@@ -350,10 +350,10 @@ const Queries = () => {
             <div key={i} className="p-6 flex flex-col md:flex-row justify-between items-start md:items-center hover:bg-gray-100 transition-colors cursor-pointer">
               <div>
                 <div className="flex items-center gap-3 mb-1">
-                  <span className="text-[#04407E] text-sm font-bold">{ticket.id}</span>
+                  <span className="text-[#9e7146] text-sm font-bold">{ticket.id}</span>
                   <span className="px-2 py-0.5 text-[10px] font-bold tracking-wider text-green-700 bg-green-100 border border-green-200">{ticket.status}</span>
                 </div>
-                <h4 className="text-[#04407E] font-medium">{ticket.subject}</h4>
+                <h4 className="text-[#9e7146] font-medium">{ticket.subject}</h4>
               </div>
               <div className="mt-4 md:mt-0 text-gray-500 text-sm">{ticket.date}</div>
             </div>
@@ -368,7 +368,7 @@ const Notifications = () => {
   return (
     <div className="space-y-8 pb-20 md:pb-0">
       <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
-        <h2 className="text-3xl font-bold tracking-tight text-[#04407E] mb-1">Notifications</h2>
+        <h2 className="text-3xl font-bold tracking-tight text-[#9e7146] mb-1">Notifications</h2>
         <p className="text-gray-500 font-medium">Recent alerts and updates on your account.</p>
       </motion.div>
       <GlassCard className="p-0 overflow-hidden">
@@ -379,11 +379,11 @@ const Notifications = () => {
           ].map((notif, i) => (
             <div key={i} className={`p-6 flex gap-4 ${notif.unread ? 'bg-gray-100' : ''}`}>
               <div className="w-10 h-10 rounded-full bg-[#04407E]/10 flex items-center justify-center shrink-0">
-                <notif.icon className="w-5 h-5 text-[#04407E]" />
+                <notif.icon className="w-5 h-5 text-[#9e7146]" />
               </div>
               <div className="flex-1">
                 <div className="flex justify-between items-start">
-                  <h4 className={`font-medium ${notif.unread ? 'text-[#04407E]' : 'text-gray-300'}`}>{notif.title}</h4>
+                  <h4 className={`font-medium ${notif.unread ? 'text-[#9e7146]' : 'text-gray-300'}`}>{notif.title}</h4>
                   <span className="text-xs text-gray-500">{notif.time}</span>
                 </div>
                 <p className="text-sm text-gray-500 mt-1">{notif.desc}</p>
@@ -427,16 +427,16 @@ const Profile = () => {
   return (
     <div className="space-y-8 pb-20 md:pb-0">
       <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
-        <h2 className="text-3xl font-bold tracking-tight text-[#04407E] mb-1">My Profile</h2>
+        <h2 className="text-3xl font-bold tracking-tight text-[#9e7146] mb-1">My Profile</h2>
         <p className="text-gray-500 font-medium">View your personal and KYC details.</p>
       </motion.div>
       <GlassCard className="p-8">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6 border-b border-gray-200 pb-8 mb-8 text-center md:text-left">
-          <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#04407E] to-[#032c57] flex items-center justify-center text-white font-bold text-3xl shadow-[0_0_30px_rgba(212,175,55,0.3)]">
+          <div className="w-24 h-24 rounded-full bg-gray-900 flex items-center justify-center text-white font-bold text-3xl shadow-[0_0_30px_rgba(212,175,55,0.3)]">
             {user?.name ? user.name.substring(0, 2).toUpperCase() : 'JD'}
           </div>
           <div className="flex-1">
-            <h3 className="text-2xl font-bold text-[#04407E] capitalize">{user?.name || 'John Doe'}</h3>
+            <h3 className="text-2xl font-bold text-[#9e7146] capitalize">{user?.name || 'John Doe'}</h3>
             <p className="text-gray-500 mt-1">Customer Code: {mockCustomer.customerCode}</p>
             <span className="inline-block mt-3 px-3 py-1 rounded-full text-xs font-semibold text-green-700 bg-green-100 border border-green-200">KYC VERIFIED</span>
           </div>
@@ -444,29 +444,29 @@ const Profile = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 border-b border-gray-200 pb-8">
           <div>
             <p className="text-gray-500 text-xs font-bold tracking-widest uppercase mb-1">Mobile Number (Phone)</p>
-            <p className="text-[#04407E] font-medium">{user?.identifier || '+91 9876543210'}</p>
+            <p className="text-[#9e7146] font-medium">{user?.identifier || '+91 9876543210'}</p>
           </div>
           <div>
             <p className="text-gray-500 text-xs font-bold tracking-widest uppercase mb-1">Email Address</p>
-            <p className="text-[#04407E] font-medium">{user?.name ? `${user.name.toLowerCase()}@example.com` : 'john.doe@example.com'}</p>
+            <p className="text-[#9e7146] font-medium">{user?.name ? `${user.name.toLowerCase()}@example.com` : 'john.doe@example.com'}</p>
           </div>
           <div className="md:col-span-2">
             <p className="text-gray-500 text-xs font-bold tracking-widest uppercase mb-1">Current Address</p>
-            <p className="text-[#04407E] font-medium">{mockCustomer.currentaddress}</p>
+            <p className="text-[#9e7146] font-medium">{mockCustomer.currentaddress}</p>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
             <p className="text-gray-500 text-xs font-bold tracking-widest uppercase mb-1">Aadhaar</p>
-            <p className="text-[#04407E] text-sm font-medium">XXXX XXXX {mockCustomer.aadhaar.slice(-4)}</p>
+            <p className="text-[#9e7146] text-sm font-medium">XXXX XXXX {mockCustomer.aadhaar.slice(-4)}</p>
           </div>
           <div>
             <p className="text-gray-500 text-xs font-bold tracking-widest uppercase mb-1">PAN No</p>
-            <p className="text-[#04407E] text-sm font-medium">{mockCustomer.panno}</p>
+            <p className="text-[#9e7146] text-sm font-medium">{mockCustomer.panno}</p>
           </div>
           <div>
             <p className="text-gray-500 text-xs font-bold tracking-widest uppercase mb-1">Occupation</p>
-            <p className="text-[#04407E] text-sm font-medium">{mockCustomer.occupationType} - ₹{mockCustomer.monthlyIncome.toLocaleString()}</p>
+            <p className="text-[#9e7146] text-sm font-medium">{mockCustomer.occupationType} - ₹{mockCustomer.monthlyIncome.toLocaleString()}</p>
           </div>
         </div>
       </GlassCard>
@@ -481,13 +481,13 @@ const SettingsPage = () => {
   return (
     <div className="space-y-8 pb-20 md:pb-0">
       <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
-        <h2 className="text-3xl font-bold tracking-tight text-[#04407E] mb-1">Settings</h2>
+        <h2 className="text-3xl font-bold tracking-tight text-[#9e7146] mb-1">Settings</h2>
         <p className="text-gray-600 font-medium">Manage your portal preferences.</p>
       </motion.div>
       <div className="grid gap-6 max-w-3xl">
         <GlassCard className="p-6 flex items-center justify-between">
           <div>
-            <h4 className="font-bold text-[#04407E]">Email Notifications</h4>
+            <h4 className="font-bold text-[#9e7146]">Email Notifications</h4>
             <p className="text-sm text-gray-500">Receive alerts for upcoming EMIs and offers.</p>
           </div>
           <div onClick={() => setEmail(!email)} className={`w-12 h-6 rounded-full relative cursor-pointer transition-colors ${email ? 'bg-[#04407E]' : 'bg-gray-300'}`}>
@@ -496,7 +496,7 @@ const SettingsPage = () => {
         </GlassCard>
         <GlassCard className="p-6 flex items-center justify-between">
           <div>
-            <h4 className="font-bold text-[#04407E]">WhatsApp Updates</h4>
+            <h4 className="font-bold text-[#9e7146]">WhatsApp Updates</h4>
             <p className="text-sm text-gray-500">Get payment receipts directly on WhatsApp.</p>
           </div>
           <div onClick={() => setWhatsapp(!whatsapp)} className={`w-12 h-6 rounded-full relative cursor-pointer transition-colors ${whatsapp ? 'bg-[#04407E]' : 'bg-gray-300'}`}>
@@ -505,10 +505,10 @@ const SettingsPage = () => {
         </GlassCard>
         <GlassCard className="p-6 flex items-center justify-between">
           <div>
-            <h4 className="font-bold text-[#04407E]">Change MPIN / Password</h4>
+            <h4 className="font-bold text-[#9e7146]">Change MPIN / Password</h4>
             <p className="text-sm text-gray-500">Update your security credentials.</p>
           </div>
-          <button onClick={() => alert('Sending reset instructions to your registered email...')} className="px-4 py-2 rounded-full bg-gray-200 text-[#04407E] font-semibold text-sm hover:bg-gray-300 transition-colors">Update</button>
+          <button onClick={() => alert('Sending reset instructions to your registered email...')} className="px-4 py-2 rounded-full bg-gray-200 text-[#9e7146] font-semibold text-sm hover:bg-gray-300 transition-colors">Update</button>
         </GlassCard>
       </div>
     </div>
@@ -519,28 +519,28 @@ const SettingsPage = () => {
 const Offers = () => {
   return (
     <div className="space-y-8 pb-20 md:pb-0">
-      <h2 className="text-3xl font-bold tracking-tight text-[#04407E] mb-1">Pre-approved Offers</h2>
+      <h2 className="text-3xl font-bold tracking-tight text-[#9e7146] mb-1">Pre-approved Offers</h2>
       <p className="text-gray-600 font-medium">Exclusive deals handpicked for you based on your repayment history.</p>
       
       <div className="grid md:grid-cols-2 gap-6">
         <GlassCard className="p-6 border border-[#04407E]/20 bg-gradient-to-br from-[#04407E]/5 to-transparent">
           <div className="flex justify-between items-start mb-4">
-            <h3 className="font-bold text-[#04407E] text-xl">Upgrade Your Ride</h3>
+            <h3 className="font-bold text-[#9e7146] text-xl">Upgrade Your Ride</h3>
             <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">PRE-APPROVED</span>
           </div>
           <p className="text-gray-600 mb-6">Get up to ₹1,20,000 for a new two-wheeler with zero processing fee.</p>
-          <button onClick={() => alert('Offer claimed successfully! Our representative will contact you shortly.')} className="px-6 py-2 bg-[#04407E] text-white rounded-full font-semibold hover:bg-[#033060] transition-colors w-full">
+          <button onClick={() => alert('Offer claimed successfully! Our representative will contact you shortly.')} className="px-6 py-2 bg-[#FFD700] text-black rounded-lg font-bold uppercase tracking-wider hover:bg-[#F2C900] transition-all shadow-sm w-full">
             Claim Offer
           </button>
         </GlassCard>
         
         <GlassCard className="p-6 border border-gray-200">
           <div className="flex justify-between items-start mb-4">
-            <h3 className="font-bold text-[#04407E] text-xl">Top-up Loan</h3>
+            <h3 className="font-bold text-[#9e7146] text-xl">Top-up Loan</h3>
             <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold">ELIGIBLE</span>
           </div>
           <p className="text-gray-600 mb-6">Need quick cash? Avail a top-up loan of ₹25,000 against your existing active loan.</p>
-          <button onClick={() => alert('Top-up loan application started!')} className="px-6 py-2 border-2 border-[#04407E] text-[#04407E] rounded-full font-semibold hover:bg-gray-50 transition-colors w-full">
+          <button onClick={() => alert('Top-up loan application started!')} className="px-6 py-2 bg-[#FFD700] text-black rounded-lg font-bold uppercase tracking-wider hover:bg-[#F2C900] transition-all shadow-sm w-full">
             Apply Now
           </button>
         </GlassCard>
@@ -552,13 +552,13 @@ const Offers = () => {
 const ApplyLoan = () => {
   const navigate = useNavigate();
   return (
-    <div className="space-y-8 pb-20 md:pb-0 flex flex-col items-center justify-center text-center py-20">
+    <div className="space-y-8 pb-20 md:pb-0 flex flex-col items-center justify-center text-center py-10 md:py-12">
       <div className="w-24 h-24 rounded-full bg-[#04407E]/10 flex items-center justify-center mb-4">
-        <CreditCard className="w-10 h-10 text-[#04407E]" />
+        <CreditCard className="w-10 h-10 text-[#9e7146]" />
       </div>
-      <h2 className="text-3xl font-bold tracking-tight text-[#04407E] mb-1">Apply for a New Loan</h2>
+      <h2 className="text-3xl font-bold tracking-tight text-[#9e7146] mb-1">Apply for a New Loan</h2>
       <p className="text-gray-600 font-medium max-w-md mx-auto">You are just a few clicks away from financing your next dream vehicle. Let's get started.</p>
-      <button onClick={() => navigate('/finance')} className="px-8 py-3 bg-[#04407E] text-white rounded-full font-bold hover:bg-[#033060] transition-colors mt-4">
+      <button onClick={() => navigate('/finance')} className="px-8 py-3 bg-[#FFD700] text-black rounded-lg font-bold uppercase tracking-wider hover:bg-[#F2C900] transition-all shadow-sm mt-4">
         Start Application
       </button>
     </div>
@@ -606,74 +606,84 @@ export default function PortalPreview() {
     ];
 
   return (
-    <div className="min-h-screen bg-gray-50 text-[#04407E] font-sans selection:bg-[#04407E] selection:text-white flex relative overflow-hidden">
+    <div className="min-h-screen bg-gray-50 text-gray-900 font-sans selection:bg-[#04407E] selection:text-white flex relative overflow-hidden">
       
-      {/* Ambient Glows */}
-      <div className="fixed top-[-20%] left-[-10%] w-[50vw] h-[50vw] bg-indigo-500/10 blur-[120px] pointer-events-none" />
-      <div className="fixed bottom-[-20%] right-[-10%] w-[40vw] h-[40vw] bg-[#04407E]/10 blur-[120px] pointer-events-none" />
+      
 
       {/* Sidebar (Desktop) */}
-      <aside className="w-72 bg-white/90 backdrop-blur-xl border-r border-gray-200 hidden md:flex flex-col fixed h-screen z-10">
-        <div className="p-8 flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#04407E] to-[#032c57] flex items-center justify-center">
-            <img src="/logo.jpeg" alt="Logo" className="w-8 h-8 rounded-full object-cover" />
+      <aside className="w-[300px] bg-white border-r border-gray-200 hidden md:flex flex-col fixed h-screen z-10 shadow-[5px_0_15px_rgba(0,0,0,0.05)]">
+        
+        {/* Header */}
+        <div className="p-5 flex items-center gap-3 border-b border-gray-100 bg-white">
+          <div className="flex flex-col items-start ml-2">
+            <span className="font-extrabold text-2xl tracking-tight text-gray-900 leading-none">
+              RITIKA
+            </span>
+            <span className="font-bold text-[10px] text-black uppercase tracking-wider mt-0.5 bg-[#FFD700] px-1 py-0.5 inline-block w-max">
+              Financial Corporation
+            </span>
           </div>
-          <span className="text-lg font-black tracking-tighter text-[#04407E] uppercase">Ritika Financial Corporation</span>
         </div>
         
-        <div className="px-6 flex-1 py-8">
-          <p className="text-xs font-bold tracking-[0.2em] text-gray-600 uppercase mb-6 ml-4">Menu</p>
-          <nav className="space-y-2 relative">
+        {/* Navigation */}
+        <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-yellow-400">
+          <nav className="flex flex-col bg-white">
             {menu.map((item) => {
               const isActive = location.pathname.includes(item.path) || (item.path === '/portal/dashboard' && location.pathname === '/portal');
               return (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className={cn(
-  "rounded-3xl",
-                    "relative flex items-center gap-4 px-4 py-4 transition-all duration-300 font-medium text-sm group",
-                    isActive ? "text-[#04407E]" : "text-gray-500 hover:text-[#04407E]"
-                  )}
-                >
-                  {isActive && (
-                    <motion.div
-                      layoutId="activeTab"
-                      className="absolute inset-0 bg-gray-100 border border-gray-200"
-                      initial={false}
-                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                    />
-                  )}
-                  <item.icon className={cn(
-  "rounded-3xl","w-5 h-5 relative z-10 transition-colors", isActive ? "text-[#04407E]" : "group-hover:text-[#04407E]")} />
-                  <span className="relative z-10">{item.name}</span>
-                </Link>
+                <div key={item.name} className="border-b border-gray-100">
+                  <Link
+                    to={item.path}
+                    className="w-full flex items-center justify-between p-4 bg-white hover:bg-gray-50 transition-colors group"
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className="relative flex items-center justify-center w-6 h-6">
+                        <div className="absolute top-1 -right-1 bg-[#FFD700] rounded-sm w-3 h-3 z-0 opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                        <item.icon className={cn("w-5 h-5 relative z-10 transition-colors", isActive ? "text-[#dcb285]" : "text-gray-800 group-hover:text-black")} strokeWidth={isActive ? 2 : 1.5} />
+                      </div>
+                      <span className={cn("text-[13px] uppercase tracking-wider transition-colors", isActive ? "font-bold text-gray-900" : "font-normal text-gray-700 group-hover:text-gray-900")}>
+                        {item.name}
+                      </span>
+                    </div>
+                  </Link>
+                </div>
               );
             })}
           </nav>
         </div>
         
-        <div className="p-6 border-t border-gray-200 space-y-2 bg-gray-50">
-          <Link to="/portal/profile" className="flex items-center gap-4 px-4 py-3 text-sm font-medium text-gray-500 hover:text-[#04407E] hover:bg-gray-100 transition-colors">
-            <User className="w-5 h-5" /> Profile
-          </Link>
-          <Link to="/portal/settings" className="flex items-center gap-4 px-4 py-3 text-sm font-medium text-gray-500 hover:text-[#04407E] hover:bg-gray-100 transition-colors">
-            <Settings className="w-5 h-5" /> Settings
-          </Link>
-          <Link to="/" onClick={() => localStorage.removeItem('ritika_user')} className="flex items-center gap-4 px-4 py-3 text-sm font-medium text-red-500/80 hover:text-red-400 hover:bg-red-500/10 transition-colors mt-2">
-            <LogOut className="w-5 h-5" /> Logout
-          </Link>
+        <div className="bg-gray-50 border-t border-gray-100 pb-4">
+          <div className="border-b border-gray-100">
+            <Link to="/portal/profile" className="w-full flex items-center p-4 hover:bg-gray-100 transition-colors group">
+              <div className="relative flex items-center justify-center w-6 h-6 mr-4">
+                <div className="absolute top-1 -right-1 bg-[#FFD700] rounded-sm w-3 h-3 z-0 opacity-80"></div>
+                <User className="w-5 h-5 relative z-10 text-gray-800" strokeWidth={1.5} />
+              </div>
+              <span className="text-[13px] font-bold uppercase tracking-wider text-gray-700">Profile</span>
+            </Link>
+          </div>
+          <div className="border-b border-gray-100">
+            <Link to="/" onClick={() => localStorage.removeItem('ritika_user')} className="w-full flex items-center p-4 hover:bg-red-50 transition-colors group">
+              <div className="relative flex items-center justify-center w-6 h-6 mr-4">
+                <div className="absolute top-1 -right-1 bg-red-400 rounded-sm w-3 h-3 z-0 opacity-80"></div>
+                <LogOut className="w-5 h-5 relative z-10 text-red-600" strokeWidth={1.5} />
+              </div>
+              <span className="text-[13px] font-bold uppercase tracking-wider text-red-600">Logout</span>
+            </Link>
+          </div>
         </div>
+
+        {/* Yellow Right Border mimicking scrollbar track style */}
+        <div className="absolute top-0 right-0 bottom-0 w-1.5 bg-[#FFD700] pointer-events-none z-20"></div>
       </aside>
 
-      
       {/* Mobile Top Bar */}
-      <div className="md:hidden fixed top-0 left-0 right-0 h-20 bg-white/90 backdrop-blur-xl border-b border-gray-200 z-50 flex items-center px-6">
+      <div className="md:hidden fixed top-0 left-0 right-0 h-20 bg-gray-900 text-white z-50 flex items-center px-6">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-full flex items-center justify-center shadow-sm">
             <img src="/logo.jpeg" alt="Logo" className="w-full h-full rounded-full object-cover" />
           </div>
-          <span className="text-lg font-black tracking-tighter text-[#04407E] uppercase">Ritika Financial Corp</span>
+          <span className="text-lg font-black tracking-tighter text-[#9e7146] uppercase">Ritika Financial Corp</span>
         </div>
       </div>
 
@@ -712,7 +722,7 @@ export default function PortalPreview() {
  
  if (item.center) {
  return (
- <button key="scan" className="relative -top-6 w-14 h-14 rounded-full bg-gradient-to-br from-[#04407E] to-[#032c57] flex items-center justify-center shadow-[0_10px_20px_rgba(4,64,126,0.3)] border-[3px] border-white">
+ <button key="scan" className="relative -top-6 w-14 h-14 rounded-full bg-gray-900 flex items-center justify-center shadow-[0_10px_20px_rgba(4,64,126,0.3)] border-[3px] border-gray-900">
  <item.icon className="w-6 h-6 text-white" />
  </button>
  )
@@ -725,7 +735,7 @@ export default function PortalPreview() {
  <item.icon className={cn(
   "rounded-3xl",
  "w-6 h-6 transition-colors",
- isActive ? "text-[#04407E]" : "text-gray-500 group-hover:text-[#04407E]"
+ isActive ? "text-[#9e7146]" : "text-gray-500 group-hover:text-[#9e7146]"
  )} />
  </div>
  

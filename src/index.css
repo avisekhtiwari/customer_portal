@@ -37,3 +37,14 @@
   }
 }
 
+
+@layer utilities {
+  .reveal-up.active {
+    @apply translate-y-0 translate-x-0 opacity-100;
+  }
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}

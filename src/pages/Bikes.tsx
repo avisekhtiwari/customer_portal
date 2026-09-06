@@ -22,7 +22,7 @@ export default function Bikes() {
  <div className="container mx-auto px-4 md:px-6">
  
  {/* Header Section */}
- <div className="text-center max-w-2xl mx-auto mb-16">
+ <div className="text-center max-w-2xl mx-auto mb-10">
  <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Find Your Perfect Ride</h1>
  <p className="text-gray-600 text-lg">Browse our extensive collection of premium motorcycles available for immediate financing.</p>
  </div>
@@ -123,7 +123,7 @@ export default function Bikes() {
  </div>
  
  {filteredBikes.length === 0 && (
- <div className="text-center py-20 bg-white border border-gray-100 shadow-sm">
+ <div className="text-center py-10 md:py-12 bg-white border border-gray-100 shadow-sm">
  <h3 className="text-2xl font-bold text-gray-900 mb-2">No bikes found</h3>
  <p className="text-gray-500">Try adjusting your search or filters.</p>
  </div>

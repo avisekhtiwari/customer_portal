@@ -35,7 +35,7 @@ export default function FAQs() {
  return (
  <div className="pt-24 pb-20 min-h-screen bg-background-alt text-gray-900">
  <div className="container mx-auto px-4 md:px-6">
- <div className="text-center max-w-2xl mx-auto mb-16">
+ <div className="text-center max-w-2xl mx-auto mb-10">
  <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Frequently Asked Questions</h1>
  <p className="text-gray-600 text-lg">Find answers to common questions about our finance process and services.</p>
  </div>
