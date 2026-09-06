@@ -1,7 +1,11 @@
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import re
 
+filepath = "/home/ubuntu/Desktop/ritika/ritika_customer_portal/src/components/DynamicTitle.tsx"
+with open(filepath, "r") as f:
+    content = f.read()
 
+# Let's add a routeDescriptions object right after routeTitles
+route_descriptions = """
 const routeDescriptions: Record<string, string> = {
   '/': 'Get the best two-wheeler loans with Ritika Financial Corporation. Enjoy lowest EMI, fast processing, and 0% processing fees.',
   '/loans': 'Apply for premium two-wheeler loans at Ritika Financial. Fast approval, flexible tenure, and lowest interest rates.',
@@ -13,58 +17,15 @@ const routeDescriptions: Record<string, string> = {
   '/purchase-bike': 'Find your dream bike and nearest authorized dealers. Get financed instantly with Ritika Financial.',
   '/contact': 'Contact Ritika Financial Corporation for queries, support, or loan assistance. We are here to help.',
 };
+"""
 
-const routeTitles: Record<string, string> = {
-  '/': 'Home',
-  '/loans': 'Two-Wheeler Loans',
-  '/insurance': 'Insurance',
-  '/top-up': 'Top-Up Loans',
-  '/refinancing': 'Refinancing',
-  '/emi-calculator': 'EMI Calculator',
-  '/interest-rates': 'Our Interest Rates',
-  '/privacy-policy': 'Privacy Policy',
-  '/dealer-staff-policy': 'Dealer & Staff Policies',
+content = content.replace(
+    "const routeTitles: Record<string, string> = {",
+    route_descriptions + "\nconst routeTitles: Record<string, string> = {"
+)
 
-
-  '/about': 'About Us',
-  '/contact': 'Contact Us',
-  '/submit-query': 'Submit a Query',
-  '/query-status': 'Check Query Status',
-  '/purchase-bike': 'Purchase a Bike',
-
-    '/dealers': 'Our Dealers',
-  '/presence': 'Our Presence',
-  '/staff': 'Our Staff',
-  '/dealer-reviews': 'Dealer Testimonials',
-  '/gallery': 'Our Gallery',
-  '/goals': 'Our Goals',
-  '/reviews': 'Reviews',
-  '/stories': 'Our Stories',
-  '/founders': 'Founders',
-  '/login': 'Login',
-};
-
-export default function DynamicTitle() {
-  const location = useLocation();
-
-  useEffect(() => {
-    // Determine the title based on the path
-    let pageTitle = 'Ritika Financial';
-    const currentPath = location.pathname;
-    
-    // Exact match or fallback
-    if (routeTitles[currentPath]) {
-      pageTitle = `${routeTitles[currentPath]} - Ritika Financial`;
-    } else {
-      // Find matching prefix if not exact (e.g., /bikes/123)
-      for (const [path, title] of Object.entries(routeTitles)) {
-        if (currentPath.startsWith(path) && path !== '/') {
-          pageTitle = `${title} - Ritika Financial`;
-          break;
-        }
-      }
-    }
-
+# Modify the useEffect to also update the meta description
+use_effect_mod = """
     document.title = pageTitle;
     
     // Update Meta Description dynamically for SEO
@@ -85,18 +46,15 @@ export default function DynamicTitle() {
       metaTag.setAttribute('content', metaDescription);
     } else {
       metaTag = document.createElement('meta');
-      metaTag.setAttribute('name', 'description');
-      metaTag.setAttribute('content', metaDescription);
+      metaTag.name = "description";
+      metaTag.content = metaDescription;
       document.head.appendChild(metaTag);
     }
+"""
 
-    // Update favicon
-    const link: HTMLLinkElement = document.querySelector("link[rel~='icon']") || document.createElement('link');
-    link.rel = 'icon';
-    link.href = '/logo.jpeg'; // Update if dynamic icon is needed per page
-    document.head.appendChild(link);
+content = content.replace("document.title = pageTitle;", use_effect_mod.strip())
 
-  }, [location]);
+with open(filepath, "w") as f:
+    f.write(content)
 
-  return null;
-}
+print("Dynamic SEO injected!")
