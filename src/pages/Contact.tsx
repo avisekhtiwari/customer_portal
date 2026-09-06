@@ -26,29 +26,29 @@ export default function Contact() {
           
           <div className="w-full lg:w-1/3 flex flex-col space-y-8">
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-[#dcb285]/20 flex items-center justify-center text-[#9e7146] shrink-0">
+              <div className="w-12 h-12 rounded-full bg-[#FFD700]/20 flex items-center justify-center text-[#dcb285] shrink-0">
                 <Phone size={24} />
               </div>
               <div>
                 <h3 className="font-bold text-xl mb-2 text-gray-900">Call Us</h3>
                 <p className="text-gray-600">Mon-Sat, 9AM to 7PM</p>
-                <p className="font-bold text-[#04407E] text-lg mt-1">1800-200-5555</p>
+                <p className="font-bold text-gray-900 text-lg mt-1">1800-200-5555</p>
               </div>
             </div>
 
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-[#dcb285]/20 flex items-center justify-center text-[#9e7146] shrink-0">
+              <div className="w-12 h-12 rounded-full bg-[#FFD700]/20 flex items-center justify-center text-[#dcb285] shrink-0">
                 <Mail size={24} />
               </div>
               <div>
                 <h3 className="font-bold text-xl mb-2 text-gray-900">Email Us</h3>
                 <p className="text-gray-600">We aim to reply within 2 hours</p>
-                <p className="font-bold text-[#04407E] text-lg mt-1">support@ritikafinancial.com</p>
+                <p className="font-bold text-gray-900 text-lg mt-1 break-all">support@ritikafinancial.com</p>
               </div>
             </div>
 
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-[#dcb285]/20 flex items-center justify-center text-[#9e7146] shrink-0">
+              <div className="w-12 h-12 rounded-full bg-[#FFD700]/20 flex items-center justify-center text-[#dcb285] shrink-0">
                 <MapPin size={24} />
               </div>
               <div>

@@ -231,7 +231,7 @@ export default function Login() {
                           value={otpArray[index]}
                           onChange={(e) => handleOtpChange(index, e.target.value)}
                           onKeyDown={(e) => handleOtpKeyDown(index, e)}
-                          className="w-12 h-14 sm:w-14 sm:h-16 rounded-xl text-center text-2xl font-black border-2 border-gray-200 focus:outline-none focus:border-[#FFD700] bg-gray-50 focus:bg-white transition-all text-gray-900 shadow-sm"
+                          className="w-10 h-12 sm:w-14 sm:h-16 rounded-xl text-center text-2xl font-black border-2 border-gray-200 focus:outline-none focus:border-[#FFD700] bg-gray-50 focus:bg-white transition-all text-gray-900 shadow-sm"
                         />
                       ))}
                     </div>

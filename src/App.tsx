@@ -43,12 +43,13 @@ import Loader from '@/components/Loader';
 function AppContent() {
   const location = useLocation();
   const isPortal = location.pathname.startsWith('/portal');
+  const isLogin = location.pathname === '/login';
 
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground selection:bg-accent selection:text-white">
       <DynamicTitle />
-      {!isPortal && <Navbar />}
-      <main className="flex-grow">
+      {!isPortal && !isLogin && <Navbar />}
+      <main className="flex-grow pb-24 md:pb-0">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -86,7 +87,7 @@ function AppContent() {
           <Route path="/portal/*" element={<PortalPreview />} />
         </Routes>
       </main>
-      {!isPortal && <Footer />}
+      {!isPortal && !isLogin && <Footer />}
     </div>
   );
 }
