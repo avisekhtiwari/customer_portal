@@ -13,7 +13,7 @@ export default function EMICalculator() {
   const totalInterest = totalAmount - amount;
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans text-gray-900 selection:bg-[#04407E] selection:text-white">
+    <div className="min-h-screen bg-[#D1DCE2] font-sans text-gray-900 selection:bg-[#04407E] selection:text-white">
       
       {/* HERO SECTION */}
       <section className="bg-gray-900 py-12 md:py-16 text-center">
@@ -40,7 +40,7 @@ export default function EMICalculator() {
               <input 
                 type="range" min="10000" max="500000" step="5000"
                 value={amount} onChange={(e) => setAmount(Number(e.target.value))}
-                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#dcb285]"
+                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#768EA6]"
               />
             </div>
 
@@ -52,7 +52,7 @@ export default function EMICalculator() {
               <input 
                 type="range" min="5" max="25" step="0.5"
                 value={rate} onChange={(e) => setRate(Number(e.target.value))}
-                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#dcb285]"
+                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#768EA6]"
               />
             </div>
 
@@ -64,7 +64,7 @@ export default function EMICalculator() {
               <input 
                 type="range" min="6" max="60" step="6"
                 value={tenure} onChange={(e) => setTenure(Number(e.target.value))}
-                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#dcb285]"
+                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#768EA6]"
               />
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function EMICalculator() {
             
             <div className="mb-8 border-b border-gray-700 pb-8">
               <span className="block text-gray-400 mb-2">Monthly EMI</span>
-              <span className="text-6xl font-extrabold text-[#dcb285]">₹{Math.round(emi).toLocaleString()}</span>
+              <span className="text-6xl font-extrabold text-[#768EA6]">₹{Math.round(emi).toLocaleString()}</span>
             </div>
 
             <div className="space-y-4">
@@ -92,7 +92,7 @@ export default function EMICalculator() {
               </div>
             </div>
             
-            <button className="mt-10 bg-[#FFD700] hover:bg-[#F2C900] text-black font-bold uppercase tracking-wider py-4 px-8 rounded-lg transition-all shadow-sm w-full">
+            <button className="mt-10 bg-[#768EA6] hover:bg-[#7C91A6] text-white font-bold uppercase tracking-wider py-4 px-8 rounded-lg transition-all shadow-sm w-full">
               Apply for Loan Now
             </button>
           </div>

@@ -10,7 +10,7 @@ import GallerySection from '../components/home/GallerySection';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50 font-sans text-gray-900 selection:bg-[#04407E] selection:text-white">
+    <div className="min-h-screen bg-[#D1DCE2] font-sans text-gray-900 selection:bg-[#04407E] selection:text-white">
       <HeroCarousel />
       <ServicesCarousel />
       <WhyChooseUs />

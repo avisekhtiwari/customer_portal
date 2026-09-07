@@ -24,7 +24,7 @@ export default function Loans() {
   const [selectedLoan, setSelectedLoan] = useState<number | null>(null);
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans text-gray-900 selection:bg-[#04407E] selection:text-white">
+    <div className="min-h-screen bg-[#D1DCE2] font-sans text-gray-900 selection:bg-[#04407E] selection:text-white">
       
       {/* HERO SECTION */}
       <section className="bg-gray-900 py-12 md:py-16 text-center">
@@ -48,11 +48,11 @@ export default function Loans() {
               <div 
                 key={idx} 
                 onClick={() => setSelectedLoan(idx)}
-                className={`cursor-pointer rounded-3xl p-8 transition-all duration-300 border-2 ${selectedLoan === idx ? 'bg-white border-[#dcb285] shadow-xl scale-105' : 'bg-white border-transparent shadow-sm hover:shadow-md'}`}
+                className={`cursor-pointer rounded-3xl p-8 transition-all duration-300 border-2 ${selectedLoan === idx ? 'bg-white border-[#768EA6] shadow-xl scale-105' : 'bg-white border-transparent shadow-sm hover:shadow-md'}`}
               >
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-2xl font-bold text-gray-900">{product.title}</h3>
-                  <div className={`w-6 h-6 rounded-full flex items-center justify-center transition-colors ${selectedLoan === idx ? 'bg-[#dcb285] text-white' : 'bg-gray-100 text-gray-300'}`}>
+                  <div className={`w-6 h-6 rounded-full flex items-center justify-center transition-colors ${selectedLoan === idx ? 'bg-[#768EA6] text-white' : 'bg-gray-100 text-gray-300'}`}>
                     ✓
                   </div>
                 </div>
@@ -66,7 +66,7 @@ export default function Loans() {
                   ))}
                 </ul>
 
-                <button className={`w-full font-bold uppercase tracking-wider py-3 px-6 rounded-lg transition-all shadow-sm ${selectedLoan === idx ? 'bg-[#FFD700] text-black hover:bg-[#F2C900]' : 'bg-gray-100 text-gray-400 hover:bg-gray-200 hover:text-gray-600'}`}>
+                <button className={`w-full font-bold uppercase tracking-wider py-3 px-6 rounded-lg transition-all shadow-sm ${selectedLoan === idx ? 'bg-[#768EA6] text-white hover:bg-[#7C91A6]' : 'bg-gray-100 text-gray-400 hover:bg-gray-200 hover:text-gray-600'}`}>
                   {selectedLoan === idx ? 'Apply Now' : 'Select'}
                 </button>
               </div>
@@ -85,7 +85,7 @@ export default function Loans() {
           <p className="text-gray-600 text-lg leading-relaxed mb-10">
             Use our EMI calculator to find out exactly how much you can afford to borrow before you apply.
           </p>
-          <Link to="/emi-calculator" className="bg-[#FFD700] hover:bg-[#F2C900] text-black font-bold uppercase tracking-wider py-3 px-8 rounded-lg transition-all shadow-sm inline-flex items-center">
+          <Link to="/emi-calculator" className="bg-[#768EA6] hover:bg-[#7C91A6] text-white font-bold uppercase tracking-wider py-3 px-8 rounded-lg transition-all shadow-sm inline-flex items-center">
             Calculate EMI <ChevronRight className="ml-2 w-5 h-5" />
           </Link>
         </div>

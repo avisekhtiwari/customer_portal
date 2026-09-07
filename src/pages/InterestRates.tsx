@@ -11,7 +11,7 @@ export default function InterestRates() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#D1DCE2]">
       <div className="bg-gray-900 py-12 md:py-16 text-center">
         <h1 className="text-5xl font-extrabold text-white mb-6">Our Interest Rates</h1>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -26,7 +26,7 @@ export default function InterestRates() {
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
                 <thead>
-                  <tr className="bg-gray-50 text-gray-900 border-b border-gray-200">
+                  <tr className="bg-[#D1DCE2] text-gray-900 border-b border-gray-200">
                     <th className="py-5 px-6 font-bold text-sm uppercase tracking-wider">Loan Product</th>
                     <th className="py-5 px-6 font-bold text-sm uppercase tracking-wider">Interest Rate (p.a.)</th>
                     <th className="py-5 px-6 font-bold text-sm uppercase tracking-wider">Processing Fee</th>
@@ -52,7 +52,7 @@ export default function InterestRates() {
           <div className="bg-[#f8f9fa] rounded-3xl p-10 border border-gray-100 flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                <Percent className="text-[#dcb285] mr-3 w-8 h-8" />
+                <Percent className="text-[#768EA6] mr-3 w-8 h-8" />
                 Want to know your exact EMI?
               </h3>
               <p className="text-gray-600 mb-6 max-w-xl">
@@ -64,7 +64,7 @@ export default function InterestRates() {
               </ul>
             </div>
             <div className="shrink-0">
-              <Link to="/emi-calculator" className="inline-block bg-[#dcb285] hover:bg-[#c9a075] text-black font-bold py-4 px-10 rounded-full transition-colors shadow-lg text-lg">
+              <Link to="/emi-calculator" className="inline-block bg-[#768EA6] hover:bg-[#c9a075] text-white font-bold py-4 px-10 rounded-full transition-colors shadow-lg text-lg">
                 Calculate EMI Now
               </Link>
             </div>

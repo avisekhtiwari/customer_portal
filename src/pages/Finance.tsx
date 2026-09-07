@@ -193,7 +193,7 @@ export default function Finance() {
  </div>
 
  {selectedBike && (
- <div className="bg-gray-50 p-6 mb-8 flex flex-col md:flex-row items-center gap-6">
+ <div className="bg-[#D1DCE2] p-6 mb-8 flex flex-col md:flex-row items-center gap-6">
  <img src={selectedBike.image} alt={selectedBike.model} className="w-32 h-24 object-cover " />
  <div>
  <p className="text-sm text-gray-500">Selected Bike</p>

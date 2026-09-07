@@ -51,7 +51,7 @@ export default function FAQs() {
  onClick={() => setOpenIndex(openIndex === index ? null : index)}
  >
  <span className="font-semibold text-lg text-gray-900">{faq.question}</span>
- <div className={`w-8 h-8 flex items-center justify-center transition-colors ${openIndex === index ? 'bg-accent/10 text-accent' : 'bg-gray-50 text-gray-400'}`}>
+ <div className={`w-8 h-8 flex items-center justify-center transition-colors ${openIndex === index ? 'bg-accent/10 text-accent' : 'bg-[#D1DCE2] text-gray-400'}`}>
  <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`} />
  </div>
  </button>

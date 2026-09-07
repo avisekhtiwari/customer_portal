@@ -22,7 +22,7 @@ export default function PurchaseBike() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#D1DCE2]">
       <div className="bg-gray-900 py-12 md:py-16 text-center">
         <h1 className="text-5xl font-extrabold text-white mb-6">Purchase a Bike</h1>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -38,21 +38,21 @@ export default function PurchaseBike() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">How it works</h3>
               <ul className="space-y-6">
                 <li className="flex items-start">
-                  <div className="w-8 h-8 rounded-full bg-[#dcb285] text-black flex items-center justify-center font-bold mr-4 shrink-0">1</div>
+                  <div className="w-8 h-8 rounded-full bg-[#768EA6] text-white flex items-center justify-center font-bold mr-4 shrink-0">1</div>
                   <div>
                     <p className="font-bold text-gray-900">Select Vehicle & Dealer</p>
                     <p className="text-sm text-gray-600">Tell us what you want to buy and where from.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-8 h-8 rounded-full bg-[#dcb285] text-black flex items-center justify-center font-bold mr-4 shrink-0">2</div>
+                  <div className="w-8 h-8 rounded-full bg-[#768EA6] text-white flex items-center justify-center font-bold mr-4 shrink-0">2</div>
                   <div>
                     <p className="font-bold text-gray-900">Instant Pre-Approval</p>
                     <p className="text-sm text-gray-600">Our system automatically checks your eligibility.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-8 h-8 rounded-full bg-[#dcb285] text-black flex items-center justify-center font-bold mr-4 shrink-0">3</div>
+                  <div className="w-8 h-8 rounded-full bg-[#768EA6] text-white flex items-center justify-center font-bold mr-4 shrink-0">3</div>
                   <div>
                     <p className="font-bold text-gray-900">Showroom Visit</p>
                     <p className="text-sm text-gray-600">Walk into the showroom, complete KYC, and ride out!</p>
@@ -73,7 +73,7 @@ export default function PurchaseBike() {
                   <p className="text-gray-600 text-lg mb-8">
                     Your details have been shared with the dealer. A representative will contact you within 30 minutes to finalize your loan and schedule a showroom visit.
                   </p>
-                  <button onClick={() => setSubmitted(false)} className="bg-[#FFD700] hover:bg-[#F2C900] text-black font-bold uppercase tracking-wider py-3 px-8 rounded-lg transition-all shadow-sm">
+                  <button onClick={() => setSubmitted(false)} className="bg-[#768EA6] hover:bg-[#7C91A6] text-white font-bold uppercase tracking-wider py-3 px-8 rounded-lg transition-all shadow-sm">
                     Make another request
                   </button>
                 </div>
@@ -84,7 +84,7 @@ export default function PurchaseBike() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-bold text-gray-700 mb-2">Select Two-Wheeler Model</label>
-                      <select required className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#dcb285] text-lg">
+                      <select required className="w-full bg-[#D1DCE2] border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#768EA6] text-lg">
                         <option value="">Choose a bike/scooter...</option>
                         {bikes.map(bike => <option key={bike} value={bike}>{bike}</option>)}
                       </select>
@@ -93,7 +93,7 @@ export default function PurchaseBike() {
                       <label className="block text-sm font-bold text-gray-700 mb-2 flex items-center">
                         <MapPin className="w-4 h-4 mr-1 text-[#04407E]" /> Nearest Dealer
                       </label>
-                      <select required className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#dcb285] text-lg">
+                      <select required className="w-full bg-[#D1DCE2] border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#768EA6] text-lg">
                         <option value="">Choose a dealer...</option>
                         {dealers.map(dealer => <option key={dealer} value={dealer}>{dealer}</option>)}
                       </select>
@@ -105,11 +105,11 @@ export default function PurchaseBike() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-bold text-gray-700 mb-2">Full Name</label>
-                      <input required type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#dcb285]" placeholder="E.g. Rahul Sharma" />
+                      <input required type="text" className="w-full bg-[#D1DCE2] border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#768EA6]" placeholder="E.g. Rahul Sharma" />
                     </div>
                     <div>
                       <label className="block text-sm font-bold text-gray-700 mb-2">Mobile Number</label>
-                      <input required type="tel" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#dcb285]" placeholder="10-digit mobile number" />
+                      <input required type="tel" className="w-full bg-[#D1DCE2] border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#768EA6]" placeholder="10-digit mobile number" />
                     </div>
                   </div>
 
@@ -120,7 +120,7 @@ export default function PurchaseBike() {
                     </label>
                   </div>
 
-                  <button type="submit" className="bg-[#FFD700] hover:bg-[#F2C900] text-black font-bold uppercase tracking-wider py-4 px-8 rounded-lg transition-all shadow-sm w-full flex items-center justify-center text-xl shadow-lg mt-4">
+                  <button type="submit" className="bg-[#768EA6] hover:bg-[#7C91A6] text-white font-bold uppercase tracking-wider py-4 px-8 rounded-lg transition-all shadow-sm w-full flex items-center justify-center text-xl shadow-lg mt-4">
                     Submit Purchase Request <ShoppingCart className="ml-3 w-6 h-6" />
                   </button>
                 </form>

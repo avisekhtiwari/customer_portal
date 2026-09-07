@@ -68,11 +68,11 @@ export default function HeroCarousel() {
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 text-white max-w-4xl drop-shadow-lg whitespace-pre-line leading-tight">
               {heroSlides[currentHeroSlide].title}
-              <span className="text-[#dcb285] block mt-2">{heroSlides[currentHeroSlide].highlight}</span>
+              <span className="text-[#768EA6] block mt-2">{heroSlides[currentHeroSlide].highlight}</span>
             </h1>
             
             <div className="mt-12">
-              <Link to="/loans" className="inline-block bg-[#FFD700] hover:bg-[#F2C900] text-black font-extrabold text-lg uppercase tracking-wider px-10 py-4 rounded-lg transition-all shadow-sm">
+              <Link to="/loans" className="inline-block bg-[#768EA6] hover:bg-[#7C91A6] text-white font-extrabold text-lg uppercase tracking-wider px-10 py-4 rounded-lg transition-all shadow-sm">
                 {heroSlides[currentHeroSlide].button}
               </Link>
             </div>
@@ -82,13 +82,13 @@ export default function HeroCarousel() {
 
       <button 
         onClick={prevHeroSlide}
-        className="absolute left-4 z-20 p-3 rounded-full bg-black/40 text-white hover:bg-[#FFD700] hover:text-black transition-all opacity-0 group-hover:opacity-100 hidden sm:block"
+        className="absolute left-4 z-20 p-3 rounded-full bg-black/40 text-white hover:bg-[#768EA6] hover:text-white transition-all opacity-0 group-hover:opacity-100 hidden sm:block"
       >
         <ChevronLeft size={32} />
       </button>
       <button 
         onClick={nextHeroSlide}
-        className="absolute right-4 z-20 p-3 rounded-full bg-black/40 text-white hover:bg-[#FFD700] hover:text-black transition-all opacity-0 group-hover:opacity-100 hidden sm:block"
+        className="absolute right-4 z-20 p-3 rounded-full bg-black/40 text-white hover:bg-[#768EA6] hover:text-white transition-all opacity-0 group-hover:opacity-100 hidden sm:block"
       >
         <ChevronRight size={32} />
       </button>
@@ -99,7 +99,7 @@ export default function HeroCarousel() {
             key={i}
             onClick={() => setCurrentHeroSlide(i)}
             className={`w-3 h-3 rounded-full transition-all ${
-              i === currentHeroSlide ? 'bg-[#FFD700] w-10' : 'bg-white/50 hover:bg-white'
+              i === currentHeroSlide ? 'bg-[#768EA6] w-10' : 'bg-white/50 hover:bg-white'
             }`}
           />
         ))}

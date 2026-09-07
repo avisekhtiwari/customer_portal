@@ -14,28 +14,28 @@ export default function WhyChooseUs() {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-[#dcb285]/20 flex items-center justify-center text-[#9e7146]">
+              <div className="w-10 h-10 rounded-full bg-[#768EA6]/20 flex items-center justify-center text-[#9e7146]">
                 <Zap className="w-5 h-5" />
               </div>
               <span className="font-bold text-gray-900">Instant Approvals</span>
             </div>
             
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-[#dcb285]/20 flex items-center justify-center text-[#9e7146]">
+              <div className="w-10 h-10 rounded-full bg-[#768EA6]/20 flex items-center justify-center text-[#9e7146]">
                 <Shield className="w-5 h-5" />
               </div>
               <span className="font-bold text-gray-900">Zero Hidden Charges</span>
             </div>
             
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-[#dcb285]/20 flex items-center justify-center text-[#9e7146]">
+              <div className="w-10 h-10 rounded-full bg-[#768EA6]/20 flex items-center justify-center text-[#9e7146]">
                 <Globe className="w-5 h-5" />
               </div>
               <span className="font-bold text-gray-900">Pan-India Network</span>
             </div>
             
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-[#dcb285]/20 flex items-center justify-center text-[#9e7146]">
+              <div className="w-10 h-10 rounded-full bg-[#768EA6]/20 flex items-center justify-center text-[#9e7146]">
                 <Cpu className="w-5 h-5" />
               </div>
               <span className="font-bold text-gray-900">100% Digital Process</span>

@@ -81,7 +81,7 @@ export default function BikeDetail() {
  { icon: CheckCircle2, label: "Weight", value: bike.variants[0]?.weight || 'N/A' }
  ].map((spec, i) => (
  <div key={i} className="bg-white p-5 border border-gray-100 text-center hover:-translate-y-1 transition-transform">
- <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center mx-auto text-accent mb-3">
+ <div className="w-10 h-10 rounded-full bg-[#D1DCE2] flex items-center justify-center mx-auto text-accent mb-3">
  <spec.icon className="w-5 h-5" />
  </div>
  <p className="text-gray-900 font-bold mb-1">{spec.value}</p>

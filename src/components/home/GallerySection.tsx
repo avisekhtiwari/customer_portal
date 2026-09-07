@@ -12,7 +12,7 @@ export default function GallerySection() {
           <img src="https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?w=800&auto=format&fit=crop" alt="Gallery highlight 2" className="w-full h-64 object-cover rounded-2xl shadow-sm" />
         </div>
         
-        <Link to="/gallery" className="inline-block bg-[#FFD700] hover:bg-[#F2C900] text-black font-bold uppercase tracking-wider py-3 px-10 rounded-lg transition-all shadow-sm">
+        <Link to="/gallery" className="inline-block bg-[#768EA6] hover:bg-[#7C91A6] text-white font-bold uppercase tracking-wider py-3 px-10 rounded-lg transition-all shadow-sm">
           View More
         </Link>
       </div>

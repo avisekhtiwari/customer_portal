@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function StoriesSection() {
   return (
-    <section className="py-10 md:py-12 bg-gray-50">
+    <section className="py-10 md:py-12 bg-[#D1DCE2]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900">Our Stories</h2>

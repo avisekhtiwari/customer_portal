@@ -12,7 +12,7 @@ export default function AboutSection() {
         <p className="text-gray-600 text-lg leading-relaxed mb-10">
           Whether you are a student buying your first scooter, a professional upgrading to a premium bike, or a delivery executive needing a reliable electric vehicle, we tailor our financial products to suit your unique journey. We believe that a two-wheeler isn't just a vehicle—it's a step towards independence and growth.
         </p>
-        <Link to="/about" className="inline-block bg-[#FFD700] hover:bg-[#F2C900] text-black font-bold uppercase tracking-wider py-3 px-8 rounded-lg transition-all shadow-sm">
+        <Link to="/about" className="inline-block bg-[#768EA6] hover:bg-[#7C91A6] text-white font-bold uppercase tracking-wider py-3 px-8 rounded-lg transition-all shadow-sm">
           Read Our Full Story
         </Link>
       </div>

@@ -3,7 +3,7 @@ import { ChevronRight } from 'lucide-react';
 
 export default function LoanRefinancing() {
   return (
-    <div className="min-h-screen bg-gray-50 font-sans text-gray-900 selection:bg-[#04407E] selection:text-white">
+    <div className="min-h-screen bg-[#D1DCE2] font-sans text-gray-900 selection:bg-[#04407E] selection:text-white">
       
       {/* HERO SECTION */}
       <section className="relative w-full h-[500px] bg-gray-900 overflow-hidden flex flex-col justify-center items-center pb-12">
@@ -23,7 +23,7 @@ export default function LoanRefinancing() {
           <p className="text-xl text-gray-300 max-w-2xl mb-10">
             Transfer your existing two-wheeler loan to us and enjoy significantly lower interest rates and better terms.
           </p>
-          <button className="bg-[#FFD700] hover:bg-[#F2C900] text-black font-bold uppercase tracking-wider text-lg px-8 py-3 rounded-lg transition-all shadow-sm">
+          <button className="bg-[#768EA6] hover:bg-[#7C91A6] text-white font-bold uppercase tracking-wider text-lg px-8 py-3 rounded-lg transition-all shadow-sm">
             Get Started
           </button>
         </div>
@@ -43,25 +43,25 @@ export default function LoanRefinancing() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10 md:mb-0">
               
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-[#dcb285]/20 flex items-center justify-center text-[#9e7146]">
+              <div className="w-10 h-10 rounded-full bg-[#768EA6]/20 flex items-center justify-center text-[#9e7146]">
                 <span className="font-bold">✓</span>
               </div>
               <span className="font-bold text-gray-900">Lower EMIs</span>
             </div>
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-[#dcb285]/20 flex items-center justify-center text-[#9e7146]">
+              <div className="w-10 h-10 rounded-full bg-[#768EA6]/20 flex items-center justify-center text-[#9e7146]">
                 <span className="font-bold">✓</span>
               </div>
               <span className="font-bold text-gray-900">Seamless Transfer</span>
             </div>
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-[#dcb285]/20 flex items-center justify-center text-[#9e7146]">
+              <div className="w-10 h-10 rounded-full bg-[#768EA6]/20 flex items-center justify-center text-[#9e7146]">
                 <span className="font-bold">✓</span>
               </div>
               <span className="font-bold text-gray-900">Top-up Option Available</span>
             </div>
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-[#dcb285]/20 flex items-center justify-center text-[#9e7146]">
+              <div className="w-10 h-10 rounded-full bg-[#768EA6]/20 flex items-center justify-center text-[#9e7146]">
                 <span className="font-bold">✓</span>
               </div>
               <span className="font-bold text-gray-900">No Hidden Fees</span>
@@ -88,7 +88,7 @@ export default function LoanRefinancing() {
           <p className="text-gray-600 text-lg leading-relaxed mb-10">
             Our entirely digital process ensures you get your approval in minutes. Join thousands of happy riders who chose Ritika Financial for their two-wheeler needs.
           </p>
-          <button className="bg-[#FFD700] hover:bg-[#F2C900] text-black font-bold uppercase tracking-wider py-3 px-8 rounded-lg transition-all shadow-sm inline-flex items-center">
+          <button className="bg-[#768EA6] hover:bg-[#7C91A6] text-white font-bold uppercase tracking-wider py-3 px-8 rounded-lg transition-all shadow-sm inline-flex items-center">
             Apply Now <ChevronRight className="ml-2 w-5 h-5" />
           </button>
         </div>

@@ -18,7 +18,7 @@ export default function DealerReviews() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#D1DCE2]">
       <div className="bg-gray-900 py-12 md:py-16 text-center">
         <h1 className="text-5xl font-extrabold text-white mb-6">What Our Dealers Say</h1>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -30,8 +30,8 @@ export default function DealerReviews() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {reviews.map((review, idx) => (
-              <div key={idx} className="bg-gray-50 rounded-2xl p-8 border border-gray-100 relative">
-                <div className="text-5xl text-[#dcb285] opacity-30 absolute top-4 left-6">"</div>
+              <div key={idx} className="bg-[#D1DCE2] rounded-2xl p-8 border border-gray-100 relative">
+                <div className="text-5xl text-[#768EA6] opacity-30 absolute top-4 left-6">"</div>
                 <p className="text-gray-700 italic mb-8 relative z-10 pt-4">
                   {review.text}
                 </p>

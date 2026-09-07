@@ -79,13 +79,13 @@ export default function ServicesCarousel() {
           <div className="flex space-x-3">
             <button 
               onClick={prevCardSlide}
-              className="p-3 rounded-full bg-gray-50 border border-gray-200 text-gray-700 hover:bg-[#dcb285] hover:text-white transition shadow-sm"
+              className="p-3 rounded-full bg-[#D1DCE2] border border-gray-200 text-gray-700 hover:bg-[#768EA6] hover:text-white transition shadow-sm"
             >
               <ChevronLeft size={20} />
             </button>
             <button 
               onClick={nextCardSlide}
-              className="p-3 rounded-full bg-gray-50 border border-gray-200 text-gray-700 hover:bg-[#dcb285] hover:text-white transition shadow-sm"
+              className="p-3 rounded-full bg-[#D1DCE2] border border-gray-200 text-gray-700 hover:bg-[#768EA6] hover:text-white transition shadow-sm"
             >
               <ChevronRight size={20} />
             </button>
@@ -107,7 +107,7 @@ export default function ServicesCarousel() {
               {cardGroups[currentGroupIndex]?.map((card, idx) => (
                 <div 
                   key={idx} 
-                  className="bg-white rounded-[24px] p-6 md:p-8 border-2 border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgba(220,178,133,0.2)] hover:border-[#dcb285] transition-all flex flex-col items-center text-center h-full group"
+                  className="bg-white rounded-[24px] p-6 md:p-8 border-2 border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgba(220,178,133,0.2)] hover:border-[#768EA6] transition-all flex flex-col items-center text-center h-full group"
                 >
                   <h3 className="text-lg md:text-xl font-bold text-[#c49a6c] mb-4 uppercase tracking-wide group-hover:text-[#04407E] transition-colors">{card.title}</h3>
                   
@@ -115,11 +115,11 @@ export default function ServicesCarousel() {
                     {card.desc}
                   </p>
                   
-                  <div className="w-20 h-20 mb-8 bg-gray-50 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-[#FFD700]/10 transition-colors">
+                  <div className="w-20 h-20 mb-8 bg-[#D1DCE2] rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-[#768EA6]/10 transition-colors">
                     <span className="text-4xl">{card.icon}</span>
                   </div>
                   
-                  <Link to={card.path} className="w-full inline-block bg-[#FFD700] hover:bg-[#F2C900] text-black font-bold py-3 px-6 rounded-lg transition-all mt-auto text-sm uppercase tracking-wider shadow-sm">
+                  <Link to={card.path} className="w-full inline-block bg-[#768EA6] hover:bg-[#7C91A6] text-white font-bold py-3 px-6 rounded-lg transition-all mt-auto text-sm uppercase tracking-wider shadow-sm">
                     {card.button}
                   </Link>
                 </div>

@@ -11,7 +11,7 @@ export default function Dealers() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#D1DCE2]">
       <div className="bg-gray-900 py-12 md:py-16 text-center">
         <h1 className="text-5xl font-extrabold text-white mb-6">Our Dealers</h1>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -23,7 +23,7 @@ export default function Dealers() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {dealers.map((dealer, idx) => (
-              <div key={idx} className="bg-gray-50 rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+              <div key={idx} className="bg-[#D1DCE2] rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                 <span className="text-xs font-bold uppercase tracking-wider text-[#9e7146] mb-2 block">{dealer.type}</span>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{dealer.name}</h3>
                 <div className="flex items-center text-gray-600 mb-2">

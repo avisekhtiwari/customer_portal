@@ -38,46 +38,46 @@ export default function Footer() {
           
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-bold mb-4 text-[#FFD700] uppercase tracking-widest">Quick Links</h4>
+            <h4 className="text-lg font-bold mb-4 text-[#768EA6] uppercase tracking-widest">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#FFD700] transition-colors">Home</Link></li>
-              <li><Link to="/emi-calculator" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#FFD700] transition-colors">EMI Calculator</Link></li>
-              <li><Link to="/interest-rates" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#FFD700] transition-colors">Interest Rates</Link></li>
+              <li><Link to="/" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#768EA6] transition-colors">Home</Link></li>
+              <li><Link to="/emi-calculator" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#768EA6] transition-colors">EMI Calculator</Link></li>
+              <li><Link to="/interest-rates" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#768EA6] transition-colors">Interest Rates</Link></li>
             </ul>
           </div>
 
           {/* Dealers & Staff */}
           <div>
-            <h4 className="text-lg font-bold mb-4 text-[#FFD700] uppercase tracking-widest">Dealers & Staff</h4>
+            <h4 className="text-lg font-bold mb-4 text-[#768EA6] uppercase tracking-widest">Dealers & Staff</h4>
             <ul className="space-y-2">
-              <li><Link to="/dealers" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#FFD700] transition-colors">Our Dealers</Link></li>
-              <li><Link to="/presence" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#FFD700] transition-colors">Our Presence</Link></li>
-              <li><Link to="/staff" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#FFD700] transition-colors">Our Staff</Link></li>
-              <li><Link to="/dealer-reviews" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#FFD700] transition-colors">Dealer Testimonials</Link></li>
+              <li><Link to="/dealers" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#768EA6] transition-colors">Our Dealers</Link></li>
+              <li><Link to="/presence" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#768EA6] transition-colors">Our Presence</Link></li>
+              <li><Link to="/staff" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#768EA6] transition-colors">Our Staff</Link></li>
+              <li><Link to="/dealer-reviews" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#768EA6] transition-colors">Dealer Testimonials</Link></li>
             </ul>
           </div>
 
           {/* About Us */}
           <div>
-            <h4 className="text-lg font-bold mb-4 text-[#FFD700] uppercase tracking-widest">About Us</h4>
+            <h4 className="text-lg font-bold mb-4 text-[#768EA6] uppercase tracking-widest">About Us</h4>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#FFD700] transition-colors">Company Overview</Link></li>
-              <li><Link to="/gallery" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#FFD700] transition-colors">Our Gallery</Link></li>
-              <li><Link to="/goals" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#FFD700] transition-colors">Our Goals</Link></li>
-              <li><Link to="/reviews" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#FFD700] transition-colors">Our Reviews</Link></li>
-              <li><Link to="/stories" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#FFD700] transition-colors">Our Stories</Link></li>
-              <li><Link to="/founders" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#FFD700] transition-colors">Our Founders</Link></li>
+              <li><Link to="/about" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#768EA6] transition-colors">Company Overview</Link></li>
+              <li><Link to="/gallery" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#768EA6] transition-colors">Our Gallery</Link></li>
+              <li><Link to="/goals" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#768EA6] transition-colors">Our Goals</Link></li>
+              <li><Link to="/reviews" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#768EA6] transition-colors">Our Reviews</Link></li>
+              <li><Link to="/stories" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#768EA6] transition-colors">Our Stories</Link></li>
+              <li><Link to="/founders" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#768EA6] transition-colors">Our Founders</Link></li>
             </ul>
           </div>
 
           {/* Contact & Queries */}
           <div>
-            <h4 className="text-lg font-bold mb-4 text-[#FFD700] uppercase tracking-widest">Contact & Queries</h4>
+            <h4 className="text-lg font-bold mb-4 text-[#768EA6] uppercase tracking-widest">Contact & Queries</h4>
             <ul className="space-y-2">
-              <li><Link to="/contact" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#FFD700] transition-colors">Contact Us</Link></li>
-              <li><Link to="/submit-query" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#FFD700] transition-colors">Submit a Query</Link></li>
-              <li><Link to="/query-status" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#FFD700] transition-colors">Check Query Reply</Link></li>
-              <li><Link to="/purchase-bike" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#FFD700] transition-colors">Purchase a Bike</Link></li>
+              <li><Link to="/contact" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#768EA6] transition-colors">Contact Us</Link></li>
+              <li><Link to="/submit-query" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#768EA6] transition-colors">Submit a Query</Link></li>
+              <li><Link to="/query-status" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#768EA6] transition-colors">Check Query Reply</Link></li>
+              <li><Link to="/purchase-bike" className="text-white text-sm font-bold uppercase tracking-wider hover:text-[#768EA6] transition-colors">Purchase a Bike</Link></li>
             </ul>
           </div>
           
@@ -86,29 +86,29 @@ export default function Footer() {
         {/* Contact Info Footer Row */}
         <div className="bg-white/5 rounded-2xl p-6 mb-8 grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-[#FFD700]/20 flex items-center justify-center shrink-0">
-              <MapPin className="w-5 h-5 text-[#FFD700]" />
+            <div className="w-12 h-12 rounded-full bg-[#768EA6]/20 flex items-center justify-center shrink-0">
+              <MapPin className="w-5 h-5 text-[#768EA6]" />
             </div>
             <div>
-              <p className="text-[#FFD700] font-bold text-sm">Head Office</p>
+              <p className="text-[#768EA6] font-bold text-sm">Head Office</p>
               <p className="text-white text-sm">Ritika Towers, Cybercity, Gurugram</p>
             </div>
           </div>
           <div className="flex items-center gap-4 md:border-l md:border-gray-800 md:pl-6">
-            <div className="w-12 h-12 rounded-full bg-[#FFD700]/20 flex items-center justify-center shrink-0">
-              <Phone className="w-5 h-5 text-[#FFD700]" />
+            <div className="w-12 h-12 rounded-full bg-[#768EA6]/20 flex items-center justify-center shrink-0">
+              <Phone className="w-5 h-5 text-[#768EA6]" />
             </div>
             <div>
-              <p className="text-[#FFD700] font-bold text-sm">Helpline</p>
+              <p className="text-[#768EA6] font-bold text-sm">Helpline</p>
               <p className="text-white text-sm">1800-200-5555</p>
             </div>
           </div>
           <div className="flex items-center gap-4 md:border-l md:border-gray-800 md:pl-6">
-            <div className="w-12 h-12 rounded-full bg-[#FFD700]/20 flex items-center justify-center shrink-0">
-              <Mail className="w-5 h-5 text-[#FFD700]" />
+            <div className="w-12 h-12 rounded-full bg-[#768EA6]/20 flex items-center justify-center shrink-0">
+              <Mail className="w-5 h-5 text-[#768EA6]" />
             </div>
             <div>
-              <p className="text-[#FFD700] font-bold text-sm">Email Support</p>
+              <p className="text-[#768EA6] font-bold text-sm">Email Support</p>
               <p className="text-white text-sm">support@ritikafinancial.com</p>
             </div>
           </div>

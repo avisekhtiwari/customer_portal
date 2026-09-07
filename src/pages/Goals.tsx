@@ -13,7 +13,7 @@ export default function Goals() {
 
       <GoalsSection />
 
-      <section className="py-10 md:py-12 bg-gray-50">
+      <section className="py-10 md:py-12 bg-[#D1DCE2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto space-y-12 text-gray-700 text-lg leading-relaxed">
             <div>

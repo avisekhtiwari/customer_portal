@@ -11,7 +11,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans text-gray-900 selection:bg-[#04407E] selection:text-white">
+    <div className="min-h-screen bg-[#D1DCE2] font-sans text-gray-900 selection:bg-[#04407E] selection:text-white">
       
       {/* HERO SECTION */}
       <section className="bg-gray-900 py-12 md:py-16 text-center">
@@ -26,7 +26,7 @@ export default function Contact() {
           
           <div className="w-full lg:w-1/3 flex flex-col space-y-8">
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-[#FFD700]/20 flex items-center justify-center text-[#dcb285] shrink-0">
+              <div className="w-12 h-12 rounded-full bg-[#768EA6]/20 flex items-center justify-center text-[#768EA6] shrink-0">
                 <Phone size={24} />
               </div>
               <div>
@@ -37,7 +37,7 @@ export default function Contact() {
             </div>
 
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-[#FFD700]/20 flex items-center justify-center text-[#dcb285] shrink-0">
+              <div className="w-12 h-12 rounded-full bg-[#768EA6]/20 flex items-center justify-center text-[#768EA6] shrink-0">
                 <Mail size={24} />
               </div>
               <div>
@@ -48,7 +48,7 @@ export default function Contact() {
             </div>
 
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-[#FFD700]/20 flex items-center justify-center text-[#dcb285] shrink-0">
+              <div className="w-12 h-12 rounded-full bg-[#768EA6]/20 flex items-center justify-center text-[#768EA6] shrink-0">
                 <MapPin size={24} />
               </div>
               <div>
@@ -74,25 +74,25 @@ export default function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-bold text-gray-700 mb-2">Full Name</label>
-                    <input required type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#dcb285]" placeholder="John Doe" />
+                    <input required type="text" className="w-full bg-[#D1DCE2] border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#768EA6]" placeholder="John Doe" />
                   </div>
                   <div>
                     <label className="block text-sm font-bold text-gray-700 mb-2">Phone Number</label>
-                    <input required type="tel" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#dcb285]" placeholder="+91 98765 43210" />
+                    <input required type="tel" className="w-full bg-[#D1DCE2] border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#768EA6]" placeholder="+91 98765 43210" />
                   </div>
                 </div>
                 
                 <div>
                   <label className="block text-sm font-bold text-gray-700 mb-2">Email Address</label>
-                  <input required type="email" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#dcb285]" placeholder="john@example.com" />
+                  <input required type="email" className="w-full bg-[#D1DCE2] border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#768EA6]" placeholder="john@example.com" />
                 </div>
 
                 <div>
                   <label className="block text-sm font-bold text-gray-700 mb-2">How can we help?</label>
-                  <textarea required rows={4} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#dcb285] resize-none" placeholder="Please describe your query..."></textarea>
+                  <textarea required rows={4} className="w-full bg-[#D1DCE2] border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#768EA6] resize-none" placeholder="Please describe your query..."></textarea>
                 </div>
 
-                <button type="submit" className="bg-[#FFD700] hover:bg-[#F2C900] text-black font-bold uppercase tracking-wider py-4 px-8 rounded-lg transition-all shadow-sm w-full flex items-center justify-center">
+                <button type="submit" className="bg-[#768EA6] hover:bg-[#7C91A6] text-white font-bold uppercase tracking-wider py-4 px-8 rounded-lg transition-all shadow-sm w-full flex items-center justify-center">
                   Submit Query <Send className="ml-2 w-5 h-5" />
                 </button>
               </form>

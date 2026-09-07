@@ -57,7 +57,7 @@ export default function Navbar() {
                 <span className="font-extrabold text-xl md:text-2xl tracking-tight text-gray-900 leading-none">
                   RITIKA
                 </span>
-                <span className="font-bold text-[10px] md:text-xs text-black uppercase tracking-wider mt-0.5 bg-[#FFD700] px-1 inline-block w-max">
+                <span className="font-bold text-[10px] md:text-xs text-white uppercase tracking-wider mt-0.5 bg-[#768EA6] px-1 inline-block w-max">
                   Financial Corporation
                 </span>
               </div>
@@ -72,12 +72,12 @@ export default function Navbar() {
             
             <button className="relative hidden md:block text-gray-700 hover:text-black transition">
               <Bell className="w-5 h-5" strokeWidth={2} />
-              <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-[#FFD700] rounded-full border-2 border-white"></span>
+              <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-[#768EA6] rounded-full border-2 border-white"></span>
             </button>
 
             <Link 
               to="/login" 
-              className="flex items-center gap-2 bg-[#FFD700] hover:bg-[#F2C900] text-black font-bold text-sm px-5 py-2.5 rounded-lg transition-colors shadow-sm"
+              className="flex items-center gap-2 bg-[#768EA6] hover:bg-[#7C91A6] text-white font-bold text-sm px-5 py-2.5 rounded-lg transition-colors shadow-sm"
             >
               <User className="w-4 h-4" strokeWidth={2.5} />
               <span className="hidden md:inline">Register / Login</span>
@@ -90,13 +90,13 @@ export default function Navbar() {
         <div className="bg-black hidden md:block relative z-40">
           <nav className="flex justify-center space-x-10 text-sm font-bold uppercase tracking-wider py-3.5 px-4 max-w-7xl mx-auto">
             
-            <Link to="/" className="flex items-center text-gray-200 hover:text-[#FFD700] transition-colors py-2">
+            <Link to="/" className="flex items-center text-gray-200 hover:text-[#768EA6] transition-colors py-2">
               Home
             </Link>
-            <Link to="/emi-calculator" className="flex items-center text-gray-200 hover:text-[#FFD700] transition-colors py-2">
+            <Link to="/emi-calculator" className="flex items-center text-gray-200 hover:text-[#768EA6] transition-colors py-2">
               EMI Calculator
             </Link>
-            <Link to="/interest-rates" className="flex items-center text-gray-200 hover:text-[#FFD700] transition-colors py-2">
+            <Link to="/interest-rates" className="flex items-center text-gray-200 hover:text-[#768EA6] transition-colors py-2">
               Interest Rates
             </Link>
 
@@ -106,7 +106,7 @@ export default function Navbar() {
               onMouseEnter={() => setActiveMegaMenu('dealers')}
               onMouseLeave={() => setActiveMegaMenu(null)}
             >
-              <Link to="/dealers" className="flex items-center text-gray-200 hover:text-[#FFD700] transition-colors py-2">
+              <Link to="/dealers" className="flex items-center text-gray-200 hover:text-[#768EA6] transition-colors py-2">
                 Dealers & Staff <ChevronDown className="w-4 h-4 ml-1.5 opacity-70" />
               </Link>
 
@@ -117,7 +117,7 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute left-1/2 -translate-x-1/2 mt-0 w-56 bg-white text-black shadow-xl border-t-2 border-[#FFD700] rounded-b-xl overflow-hidden z-50"
+                    className="absolute left-1/2 -translate-x-1/2 mt-0 w-56 bg-white text-black shadow-xl border-t-2 border-[#768EA6] rounded-b-xl overflow-hidden z-50"
                   >
                     <div className="flex flex-col py-2">
                       <Link to="/dealers" className="px-6 py-3 text-xs font-bold uppercase tracking-wider hover:bg-yellow-50 hover:text-[#9e7146] transition-colors border-b border-gray-100 last:border-0">Our Dealers</Link>
@@ -136,7 +136,7 @@ export default function Navbar() {
               onMouseEnter={() => setActiveMegaMenu('about')}
               onMouseLeave={() => setActiveMegaMenu(null)}
             >
-              <Link to="/about" className="flex items-center text-gray-200 hover:text-[#FFD700] transition-colors py-2">
+              <Link to="/about" className="flex items-center text-gray-200 hover:text-[#768EA6] transition-colors py-2">
                 About Us <ChevronDown className="w-4 h-4 ml-1.5 opacity-70" />
               </Link>
 
@@ -147,7 +147,7 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute left-1/2 -translate-x-1/2 mt-0 w-64 bg-white text-black shadow-xl border-t-2 border-[#FFD700] rounded-b-xl overflow-hidden z-50"
+                    className="absolute left-1/2 -translate-x-1/2 mt-0 w-64 bg-white text-black shadow-xl border-t-2 border-[#768EA6] rounded-b-xl overflow-hidden z-50"
                   >
                     <div className="flex flex-col py-2">
                       <Link to="/about" className="px-6 py-3 text-xs font-bold uppercase tracking-wider hover:bg-yellow-50 hover:text-[#9e7146] transition-colors border-b border-gray-100 last:border-0">Company Overview</Link>
@@ -168,7 +168,7 @@ export default function Navbar() {
               onMouseEnter={() => setActiveMegaMenu('contact')}
               onMouseLeave={() => setActiveMegaMenu(null)}
             >
-              <Link to="/contact" className="flex items-center text-gray-200 hover:text-[#FFD700] transition-colors py-2">
+              <Link to="/contact" className="flex items-center text-gray-200 hover:text-[#768EA6] transition-colors py-2">
                 Contact & Queries <ChevronDown className="w-4 h-4 ml-1.5 opacity-70" />
               </Link>
 
@@ -179,7 +179,7 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute right-0 mt-0 w-56 bg-white text-black shadow-xl border-t-2 border-[#FFD700] rounded-b-xl overflow-hidden z-50"
+                    className="absolute right-0 mt-0 w-56 bg-white text-black shadow-xl border-t-2 border-[#768EA6] rounded-b-xl overflow-hidden z-50"
                   >
                     <div className="flex flex-col py-2">
                       <Link to="/contact" className="px-6 py-3 text-xs font-bold uppercase tracking-wider hover:bg-yellow-50 hover:text-[#9e7146] transition-colors border-b border-gray-100 last:border-0">Contact Us</Link>
@@ -225,7 +225,7 @@ export default function Navbar() {
                   <span className="font-extrabold text-xl md:text-2xl tracking-tight text-gray-900 leading-none">
                     RITIKA
                   </span>
-                  <span className="font-bold text-[9px] md:text-[10px] text-black uppercase tracking-wider mt-0.5 bg-[#FFD700] px-1 py-0.5 inline-block w-max">
+                  <span className="font-bold text-[9px] md:text-[10px] text-white uppercase tracking-wider mt-0.5 bg-[#768EA6] px-1 py-0.5 inline-block w-max">
                     Financial Corporation
                   </span>
                 </div>
@@ -236,10 +236,10 @@ export default function Navbar() {
                 <div className="flex flex-col">
                   
                   <div className="border-b border-gray-100">
-                    <Link onClick={() => setIsSidebarOpen(false)} to="/" className="w-full flex items-center p-4 hover:bg-gray-50 transition-colors group">
+                    <Link onClick={() => setIsSidebarOpen(false)} to="/" className="w-full flex items-center p-4 hover:bg-[#D1DCE2] transition-colors group">
                       <div className="flex items-center gap-4">
                         <div className="relative flex items-center justify-center w-6 h-6">
-                          <div className="absolute top-1 -right-1 bg-[#FFD700] rounded-sm w-3 h-3 z-0 opacity-80 group-hover:opacity-100"></div>
+                          <div className="absolute top-1 -right-1 bg-[#768EA6] rounded-sm w-3 h-3 z-0 opacity-80 group-hover:opacity-100"></div>
                           <Home className="w-5 h-5 relative z-10 text-gray-800" strokeWidth={1.5} />
                         </div>
                         <span className="text-[13px] font-bold uppercase tracking-wider text-gray-800 group-hover:text-black">Home</span>
@@ -248,10 +248,10 @@ export default function Navbar() {
                   </div>
                   
                   <div className="border-b border-gray-100">
-                    <Link onClick={() => setIsSidebarOpen(false)} to="/emi-calculator" className="w-full flex items-center p-4 hover:bg-gray-50 transition-colors group">
+                    <Link onClick={() => setIsSidebarOpen(false)} to="/emi-calculator" className="w-full flex items-center p-4 hover:bg-[#D1DCE2] transition-colors group">
                       <div className="flex items-center gap-4">
                         <div className="relative flex items-center justify-center w-6 h-6">
-                          <div className="absolute top-1 -right-1 bg-[#FFD700] rounded-sm w-3 h-3 z-0 opacity-80 group-hover:opacity-100"></div>
+                          <div className="absolute top-1 -right-1 bg-[#768EA6] rounded-sm w-3 h-3 z-0 opacity-80 group-hover:opacity-100"></div>
                           <Calculator className="w-5 h-5 relative z-10 text-gray-800" strokeWidth={1.5} />
                         </div>
                         <span className="text-[13px] font-bold uppercase tracking-wider text-gray-800 group-hover:text-black">EMI Calculator</span>
@@ -260,10 +260,10 @@ export default function Navbar() {
                   </div>
 
                   <div className="border-b border-gray-100">
-                    <Link onClick={() => setIsSidebarOpen(false)} to="/interest-rates" className="w-full flex items-center p-4 hover:bg-gray-50 transition-colors group">
+                    <Link onClick={() => setIsSidebarOpen(false)} to="/interest-rates" className="w-full flex items-center p-4 hover:bg-[#D1DCE2] transition-colors group">
                       <div className="flex items-center gap-4">
                         <div className="relative flex items-center justify-center w-6 h-6">
-                          <div className="absolute top-1 -right-1 bg-[#FFD700] rounded-sm w-3 h-3 z-0 opacity-80 group-hover:opacity-100"></div>
+                          <div className="absolute top-1 -right-1 bg-[#768EA6] rounded-sm w-3 h-3 z-0 opacity-80 group-hover:opacity-100"></div>
                           <Compass className="w-5 h-5 relative z-10 text-gray-800" strokeWidth={1.5} />
                         </div>
                         <span className="text-[13px] font-bold uppercase tracking-wider text-gray-800 group-hover:text-black">Interest Rates</span>
@@ -276,14 +276,14 @@ export default function Navbar() {
                     <div className="w-full flex items-center justify-between p-4 bg-white cursor-default">
                       <div className="flex items-center gap-4">
                         <div className="relative flex items-center justify-center w-6 h-6">
-                          <div className="absolute top-1 -right-1 bg-[#FFD700] rounded-sm w-3 h-3 z-0 opacity-80"></div>
+                          <div className="absolute top-1 -right-1 bg-[#768EA6] rounded-sm w-3 h-3 z-0 opacity-80"></div>
                           <User className="w-5 h-5 relative z-10 text-gray-800" strokeWidth={1.5} />
                         </div>
                         <span className="text-[13px] font-bold uppercase tracking-wider text-gray-800">Dealers & Staff</span>
                       </div>
                       <ChevronDown className="w-4 h-4 text-gray-500" strokeWidth={1.5} />
                     </div>
-                    <div className="bg-gray-50/50 pl-[3.25rem] py-2 flex flex-col">
+                    <div className="bg-[#D1DCE2]/50 pl-[3.25rem] py-2 flex flex-col">
                       <Link onClick={() => setIsSidebarOpen(false)} to="/dealers" className="py-2.5 text-[12px] font-bold uppercase tracking-wider text-gray-600 hover:text-black">Our Dealers</Link>
                       <Link onClick={() => setIsSidebarOpen(false)} to="/presence" className="py-2.5 text-[12px] font-bold uppercase tracking-wider text-gray-600 hover:text-black">Our Presence</Link>
                       <Link onClick={() => setIsSidebarOpen(false)} to="/staff" className="py-2.5 text-[12px] font-bold uppercase tracking-wider text-gray-600 hover:text-black">Our Staff</Link>
@@ -296,14 +296,14 @@ export default function Navbar() {
                     <div className="w-full flex items-center justify-between p-4 bg-white cursor-default">
                       <div className="flex items-center gap-4">
                         <div className="relative flex items-center justify-center w-6 h-6">
-                          <div className="absolute top-1 -right-1 bg-[#FFD700] rounded-sm w-3 h-3 z-0 opacity-80"></div>
+                          <div className="absolute top-1 -right-1 bg-[#768EA6] rounded-sm w-3 h-3 z-0 opacity-80"></div>
                           <Bell className="w-5 h-5 relative z-10 text-gray-800" strokeWidth={1.5} />
                         </div>
                         <span className="text-[13px] font-bold uppercase tracking-wider text-gray-800">About Us</span>
                       </div>
                       <ChevronDown className="w-4 h-4 text-gray-500" strokeWidth={1.5} />
                     </div>
-                    <div className="bg-gray-50/50 pl-[3.25rem] py-2 flex flex-col">
+                    <div className="bg-[#D1DCE2]/50 pl-[3.25rem] py-2 flex flex-col">
                       <Link onClick={() => setIsSidebarOpen(false)} to="/about" className="py-2.5 text-[12px] font-bold uppercase tracking-wider text-gray-600 hover:text-black">Company Overview</Link>
                       <Link onClick={() => setIsSidebarOpen(false)} to="/gallery" className="py-2.5 text-[12px] font-bold uppercase tracking-wider text-gray-600 hover:text-black">Our Gallery</Link>
                       <Link onClick={() => setIsSidebarOpen(false)} to="/goals" className="py-2.5 text-[12px] font-bold uppercase tracking-wider text-gray-600 hover:text-black">Our Goals</Link>
@@ -318,14 +318,14 @@ export default function Navbar() {
                     <div className="w-full flex items-center justify-between p-4 bg-white cursor-default">
                       <div className="flex items-center gap-4">
                         <div className="relative flex items-center justify-center w-6 h-6">
-                          <div className="absolute top-1 -right-1 bg-[#FFD700] rounded-sm w-3 h-3 z-0 opacity-80"></div>
+                          <div className="absolute top-1 -right-1 bg-[#768EA6] rounded-sm w-3 h-3 z-0 opacity-80"></div>
                           <MessageSquare className="w-5 h-5 relative z-10 text-gray-800" strokeWidth={1.5} />
                         </div>
                         <span className="text-[13px] font-bold uppercase tracking-wider text-gray-800">Contact & Queries</span>
                       </div>
                       <ChevronDown className="w-4 h-4 text-gray-500" strokeWidth={1.5} />
                     </div>
-                    <div className="bg-gray-50/50 pl-[3.25rem] py-2 flex flex-col">
+                    <div className="bg-[#D1DCE2]/50 pl-[3.25rem] py-2 flex flex-col">
                       <Link onClick={() => setIsSidebarOpen(false)} to="/contact" className="py-2.5 text-[12px] font-bold uppercase tracking-wider text-gray-600 hover:text-black">Contact Us</Link>
                       <Link onClick={() => setIsSidebarOpen(false)} to="/submit-query" className="py-2.5 text-[12px] font-bold uppercase tracking-wider text-gray-600 hover:text-black">Submit a Query</Link>
                       <Link onClick={() => setIsSidebarOpen(false)} to="/query-status" className="py-2.5 text-[12px] font-bold uppercase tracking-wider text-gray-600 hover:text-black">Check Query Reply</Link>
@@ -337,7 +337,7 @@ export default function Navbar() {
               </div>
               
               {/* Yellow Right Border mimicking scrollbar */}
-              <div className="absolute top-0 right-0 bottom-0 w-1.5 bg-[#FFD700] pointer-events-none z-20"></div>
+              <div className="absolute top-0 right-0 bottom-0 w-1.5 bg-[#768EA6] pointer-events-none z-20"></div>
             </motion.div>
           </>
         )}
@@ -348,7 +348,7 @@ export default function Navbar() {
         "md:hidden fixed bottom-0 left-0 right-0 z-40 transition-transform duration-300", 
         showMobileNav ? "translate-y-0" : "translate-y-full"
       )}>
-        <div className="bg-white rounded-t-3xl border-t-2 border-[#FFD700] shadow-[0_-10px_40px_rgba(0,0,0,0.15)] px-6 pt-3 pb-6 flex justify-between items-center relative">
+        <div className="bg-white rounded-t-3xl border-t-2 border-[#768EA6] shadow-[0_-10px_40px_rgba(0,0,0,0.15)] px-6 pt-3 pb-6 flex justify-between items-center relative">
           {mobileNavLinks.map((link) => {
             const isActive = location.pathname === link.path || (link.path !== '/' && location.pathname.startsWith(link.path));
             
@@ -361,12 +361,12 @@ export default function Navbar() {
                 <div
                   className={cn(
                     "flex items-center justify-center h-10 w-10 rounded-full transition-all duration-300",
-                    isActive ? "bg-[#FFD700] text-black shadow-md scale-110" : "bg-transparent text-gray-400 hover:text-gray-900"
+                    isActive ? "bg-[#768EA6] text-white shadow-md scale-110" : "bg-transparent text-gray-400 hover:text-gray-900"
                   )}
                 >
                   <link.icon className="w-5 h-5 shrink-0" strokeWidth={isActive ? 2.5 : 2} />
                 </div>
-                <span className={cn("text-[9px] font-bold uppercase tracking-wider transition-colors text-center w-full truncate", isActive ? "text-[#FFD700]" : "text-gray-400")}>
+                <span className={cn("text-[9px] font-bold uppercase tracking-wider transition-colors text-center w-full truncate", isActive ? "text-[#768EA6]" : "text-gray-400")}>
                   {link.name}
                 </span>
               </Link>

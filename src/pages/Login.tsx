@@ -84,7 +84,7 @@ export default function Login() {
               <span className="font-extrabold text-4xl tracking-tight text-white leading-none">
                 RITIKA
               </span>
-              <span className="font-bold text-xs text-black uppercase tracking-widest mt-1 bg-[#FFD700] px-2 py-0.5 inline-block">
+              <span className="font-bold text-xs text-white uppercase tracking-widest mt-1 bg-[#768EA6] px-2 py-0.5 inline-block">
                 Financial Corporation
               </span>
             </div>
@@ -93,20 +93,20 @@ export default function Login() {
           <div className="space-y-8">
             <h1 className="text-4xl lg:text-5xl font-extrabold text-white leading-tight">
               Manage your <br/>
-              <span className="text-[#FFD700]">dream ride.</span>
+              <span className="text-[#768EA6]">dream ride.</span>
             </h1>
             
             <div className="space-y-4">
               <div className="flex items-center gap-3 text-gray-300">
-                <CheckCircle2 className="w-5 h-5 text-[#FFD700]" />
+                <CheckCircle2 className="w-5 h-5 text-[#768EA6]" />
                 <span className="font-medium text-lg">Track EMI schedules instantly</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
-                <CheckCircle2 className="w-5 h-5 text-[#FFD700]" />
+                <CheckCircle2 className="w-5 h-5 text-[#768EA6]" />
                 <span className="font-medium text-lg">View pre-approved top-up offers</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
-                <CheckCircle2 className="w-5 h-5 text-[#FFD700]" />
+                <CheckCircle2 className="w-5 h-5 text-[#768EA6]" />
                 <span className="font-medium text-lg">Download NOC and loan statements</span>
               </div>
             </div>
@@ -121,7 +121,7 @@ export default function Login() {
       </div>
 
       {/* Right Panel - Form */}
-      <div className="w-full lg:w-1/2 flex flex-col relative bg-gray-50 lg:bg-white h-screen overflow-y-auto">
+      <div className="w-full lg:w-1/2 flex flex-col relative bg-[#D1DCE2] lg:bg-white h-screen overflow-y-auto">
         
         {/* Top Navigation */}
         <div className="absolute top-0 left-0 w-full p-6 flex justify-between items-center z-10">
@@ -141,7 +141,7 @@ export default function Login() {
             <span className="font-extrabold text-4xl tracking-tight text-gray-900 leading-none">
               RITIKA
             </span>
-            <span className="font-bold text-[10px] text-black uppercase tracking-widest mt-1 bg-[#FFD700] px-2 py-0.5 inline-block">
+            <span className="font-bold text-[10px] text-white uppercase tracking-widest mt-1 bg-[#768EA6] px-2 py-0.5 inline-block">
               Financial Corporation
             </span>
           </div>
@@ -176,7 +176,7 @@ export default function Login() {
                         maxLength={10}
                         value={mobile}
                         onChange={(e) => setMobile(e.target.value.replace(/\D/g, ''))}
-                        className="w-full h-14 rounded-xl pl-12 pr-4 text-lg font-bold border-2 border-gray-200 focus:outline-none focus:border-[#FFD700] bg-gray-50 focus:bg-white transition-all text-gray-900 shadow-sm"
+                        className="w-full h-14 rounded-xl pl-12 pr-4 text-lg font-bold border-2 border-gray-200 focus:outline-none focus:border-[#768EA6] bg-[#D1DCE2] focus:bg-white transition-all text-gray-900 shadow-sm"
                         placeholder="10-digit mobile number"
                       />
                     </div>
@@ -204,7 +204,7 @@ export default function Login() {
                   onSubmit={handleLogin} 
                   className="space-y-6"
                 >
-                  <div className="bg-gray-50 p-4 rounded-xl border border-gray-200 flex justify-between items-center mb-2 shadow-sm">
+                  <div className="bg-[#D1DCE2] p-4 rounded-xl border border-gray-200 flex justify-between items-center mb-2 shadow-sm">
                     <div>
                       <p className="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">OTP sent to</p>
                       <p className="text-sm font-extrabold text-gray-900">+91 {mobile}</p>
@@ -231,7 +231,7 @@ export default function Login() {
                           value={otpArray[index]}
                           onChange={(e) => handleOtpChange(index, e.target.value)}
                           onKeyDown={(e) => handleOtpKeyDown(index, e)}
-                          className="w-10 h-12 sm:w-14 sm:h-16 rounded-xl text-center text-2xl font-black border-2 border-gray-200 focus:outline-none focus:border-[#FFD700] bg-gray-50 focus:bg-white transition-all text-gray-900 shadow-sm"
+                          className="w-10 h-12 sm:w-14 sm:h-16 rounded-xl text-center text-2xl font-black border-2 border-gray-200 focus:outline-none focus:border-[#768EA6] bg-[#D1DCE2] focus:bg-white transition-all text-gray-900 shadow-sm"
                         />
                       ))}
                     </div>
@@ -240,7 +240,7 @@ export default function Login() {
                   <button 
                     type="submit"
                     disabled={isLoading || otpArray.join('').length < 6}
-                    className="w-full bg-[#FFD700] hover:bg-[#F2C900] text-black font-bold uppercase tracking-wider h-14 rounded-lg transition-all shadow-sm flex justify-center items-center disabled:opacity-50 mt-4"
+                    className="w-full bg-[#768EA6] hover:bg-[#7C91A6] text-white font-bold uppercase tracking-wider h-14 rounded-lg transition-all shadow-sm flex justify-center items-center disabled:opacity-50 mt-4"
                   >
                     {isLoading ? (
                       <div className="w-6 h-6 border-2 border-black/30 border-t-black animate-spin rounded-full" />
@@ -256,7 +256,7 @@ export default function Login() {
               <p className="text-sm font-medium text-gray-500">
                 New to Ritika Financial Corp?
               </p>
-              <Link to="/purchase-bike" className="inline-flex items-center gap-1 text-black font-extrabold uppercase tracking-wider text-sm mt-2 hover:text-[#dcb285] transition-colors">
+              <Link to="/purchase-bike" className="inline-flex items-center gap-1 text-black font-extrabold uppercase tracking-wider text-sm mt-2 hover:text-[#768EA6] transition-colors">
                 Apply for a loan today
               </Link>
             </div>

@@ -7,7 +7,7 @@ export default function Staff() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#D1DCE2]">
       <div className="bg-gray-900 py-12 md:py-16 text-center">
         <h1 className="text-5xl font-extrabold text-white mb-6">Our Staff</h1>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -19,7 +19,7 @@ export default function Staff() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {staffMembers.map((staff, idx) => (
-              <div key={idx} className="bg-gray-50 rounded-3xl p-6 border border-gray-100 text-center flex flex-col items-center shadow-sm">
+              <div key={idx} className="bg-[#D1DCE2] rounded-3xl p-6 border border-gray-100 text-center flex flex-col items-center shadow-sm">
                 <img src={staff.image} alt={staff.name} className="w-32 h-32 rounded-full object-cover mb-6 shadow-md" />
                 <h3 className="text-xl font-bold text-gray-900 mb-1">{staff.name}</h3>
                 <p className="text-[#9e7146] font-medium text-sm">{staff.role}</p>

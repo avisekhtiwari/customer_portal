@@ -10,7 +10,7 @@ export default function SubmitQuery() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#D1DCE2]">
       <div className="bg-gray-900 py-12 md:py-16 text-center">
         <h1 className="text-5xl font-extrabold text-white mb-6">Submit a Query</h1>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -40,17 +40,17 @@ export default function SubmitQuery() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-bold text-gray-700 mb-2">Full Name</label>
-                    <input required type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#dcb285]" placeholder="Your Name" />
+                    <input required type="text" className="w-full bg-[#D1DCE2] border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#768EA6]" placeholder="Your Name" />
                   </div>
                   <div>
                     <label className="block text-sm font-bold text-gray-700 mb-2">Mobile Number</label>
-                    <input required type="tel" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#dcb285]" placeholder="10-digit number" />
+                    <input required type="tel" className="w-full bg-[#D1DCE2] border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#768EA6]" placeholder="10-digit number" />
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-sm font-bold text-gray-700 mb-2">Query Type</label>
-                  <select required className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#dcb285]">
+                  <select required className="w-full bg-[#D1DCE2] border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#768EA6]">
                     <option value="">Select an option</option>
                     <option value="loan_process">New Loan Process</option>
                     <option value="emi_issues">EMI Payment Issues</option>
@@ -62,10 +62,10 @@ export default function SubmitQuery() {
 
                 <div>
                   <label className="block text-sm font-bold text-gray-700 mb-2">Your Query Details</label>
-                  <textarea required rows={5} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#dcb285] resize-none" placeholder="Please describe your query in detail..."></textarea>
+                  <textarea required rows={5} className="w-full bg-[#D1DCE2] border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#768EA6] resize-none" placeholder="Please describe your query in detail..."></textarea>
                 </div>
 
-                <button type="submit" className="bg-[#FFD700] hover:bg-[#F2C900] text-black font-bold uppercase tracking-wider py-4 px-8 rounded-lg transition-all shadow-sm w-full flex items-center justify-center text-lg">
+                <button type="submit" className="bg-[#768EA6] hover:bg-[#7C91A6] text-white font-bold uppercase tracking-wider py-4 px-8 rounded-lg transition-all shadow-sm w-full flex items-center justify-center text-lg">
                   Submit Query <Send className="ml-2 w-5 h-5" />
                 </button>
               </form>

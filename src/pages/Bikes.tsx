@@ -67,7 +67,7 @@ export default function Bikes() {
  key={bike.id} 
  className="group bg-white p-4 border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500"
  >
- <div className="relative h-64 bg-gray-50 overflow-hidden mb-6 flex items-center justify-center p-6">
+ <div className="relative h-64 bg-[#D1DCE2] overflow-hidden mb-6 flex items-center justify-center p-6">
  <img 
  src={bike.image} 
  alt={bike.model} 
@@ -106,7 +106,7 @@ export default function Bikes() {
  <div className="flex gap-3">
  <Link 
  to={`/bikes/${bike.id}`} 
- className="flex-1 text-center bg-gray-50 hover:bg-gray-100 text-gray-900 py-3.5 font-bold transition-colors"
+ className="flex-1 text-center bg-[#D1DCE2] hover:bg-gray-100 text-gray-900 py-3.5 font-bold transition-colors"
  >
  View Details
  </Link>

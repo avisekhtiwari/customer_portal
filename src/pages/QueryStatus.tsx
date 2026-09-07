@@ -11,7 +11,7 @@ export default function QueryStatus() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#D1DCE2]">
       <div className="bg-gray-900 py-12 md:py-16 text-center">
         <h1 className="text-5xl font-extrabold text-white mb-6">Check Query Reply</h1>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -32,14 +32,14 @@ export default function QueryStatus() {
                 placeholder="Enter your Query ID (e.g., QRY-8842) or Mobile Number" 
                 className="flex-1 bg-transparent border-none px-6 py-2 text-lg focus:outline-none text-gray-900 placeholder-gray-400"
               />
-              <button type="submit" className="bg-[#FFD700] hover:bg-[#F2C900] text-black font-bold uppercase tracking-wider py-4 px-8 rounded-lg transition-all shadow-sm flex items-center">
+              <button type="submit" className="bg-[#768EA6] hover:bg-[#7C91A6] text-white font-bold uppercase tracking-wider py-4 px-8 rounded-lg transition-all shadow-sm flex items-center">
                 Check Status <Search className="ml-2 w-5 h-5" />
               </button>
             </div>
           </form>
 
           {hasSearched && (
-            <div className="bg-gray-50 rounded-3xl p-8 border border-gray-100 shadow-sm animate-in fade-in slide-in-from-bottom-4 duration-500">
+            <div className="bg-[#D1DCE2] rounded-3xl p-8 border border-gray-100 shadow-sm animate-in fade-in slide-in-from-bottom-4 duration-500">
               <div className="flex justify-between items-start mb-6 pb-6 border-b border-gray-200">
                 <div>
                   <span className="text-xs font-bold text-gray-500 uppercase tracking-wider block mb-1">Query ID: {searchTerm.toUpperCase().includes('QRY') ? searchTerm.toUpperCase() : 'QRY-8842'}</span>
